@@ -6,6 +6,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include "clima.h"
+#include "climadao.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,7 +51,6 @@ void MainWindow::onWeatherDataReceived() {
     }
 
     QByteArray response_data = reply->readAll();
-
     qDebug() << "Resposta da API:" << response_data;
 
     QJsonDocument jsonDoc = QJsonDocument::fromJson(response_data);
@@ -61,38 +63,46 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject jsonObj = jsonDoc.object();
 
+    // Obtenção do nome da cidade da API
+    QString cidade = jsonObj["name"].toString();  // Extraindo o nome da cidade
+    qDebug() << "Cidade: " << cidade;
+
     QJsonObject mainObj = jsonObj["main"].toObject();
     double temperatura = mainObj["temp"].toDouble();
+    temperatura -= 273.15; // Convertendo para Celsius
 
-    // Convertendo a temperatura para Celsius
-    temperatura = temperatura - 273.15;
-
-    // Obtendo a sensação térmica
-    double sensTermica = mainObj["feels_like"].toDouble();  // Sensação térmica em Kelvin
+    double sensTermica = mainObj["feels_like"].toDouble();
     sensTermica -= 273.15;  // Convertendo para Celsius
 
-    // Obtendo a temperatura mínima e máxima
-    double temp_min = mainObj["temp_min"].toDouble();  // Temperatura mínima em Kelvin
-    double temp_max = mainObj["temp_max"].toDouble();  // Temperatura máxima em Kelvin
-
-    temp_min = temp_min - 273.15;  // Convertendo para Celsius
-    temp_max = temp_max - 273.15;  // Convertendo para Celsius
-
-    qDebug() << "Temperatura em Celsius:" << temperatura;
-    qDebug() << "Sensação térmica em Celsius:" << sensTermica;
-    qDebug() << "Temperatura mínima em Celsius:" << temp_min;
-    qDebug() << "Temperatura máxima em Celsius:" << temp_max;
+    double tempMin = mainObj["temp_min"].toDouble();
+    double tempMax = mainObj["temp_max"].toDouble();
+    tempMin -= 273.15;  // Convertendo para Celsius
+    tempMax -= 273.15;  // Convertendo para Celsius
 
     double umidade = mainObj["humidity"].toDouble();
-    qDebug() << "Umidade:" << umidade;
 
     QJsonObject ventObj = jsonObj["wind"].toObject();
     double velVento = ventObj["speed"].toDouble();
     double dirVento = ventObj["deg"].toDouble();
 
+    qDebug() << "Temperatura em Celsius:" << temperatura;
+    qDebug() << "Sensação térmica em Celsius:" << sensTermica;
+    qDebug() << "Temperatura mínima em Celsius:" << tempMin;
+    qDebug() << "Temperatura máxima em Celsius:" << tempMax;
+    qDebug() << "Umidade:" << umidade;
     qDebug() << "Velocidade do vento:" << velVento << "m/s";
     qDebug() << "Direção do vento:" << dirVento << "graus";
 
+    Clima clima(temperatura, sensTermica, tempMin, tempMax, umidade, velVento, dirVento, cidade);
+
+    ClimaDAO climaDAO;
+    if (climaDAO.inserirClima(clima)) {
+        QMessageBox::information(this, "Sucesso", "Clima registrado com sucesso!");
+    } else {
+        QMessageBox::critical(this, "Erro", "Erro ao registrar clima.");
+    }
+
     reply->deleteLater();
 }
+
 
