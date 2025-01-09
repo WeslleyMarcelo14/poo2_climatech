@@ -22,4 +22,4 @@ private:
     QSqlDatabase db;
 };
 
-#endif // USUARIODAO_H
+#endif

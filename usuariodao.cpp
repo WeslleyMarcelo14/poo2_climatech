@@ -4,12 +4,10 @@
 #include <QtSql/QSqlError>
 #include <QDebug>
 
-// Construtor
 UsuarioDAO::UsuarioDAO() {
     db = QSqlDatabase::addDatabase("QPSQL");
 }
 
-// Destruidor
 UsuarioDAO::~UsuarioDAO() {
     if (db.isOpen()) {
         db.close();

@@ -6,13 +6,11 @@ Usuario::Usuario() {
     senha = "";
 }
 
-// Construtor com parâmetros
 Usuario::Usuario(const QString &nome, const QString &email, const QString &senha)
     : nome(nome), email(email), senha(senha)
 {
 }
 
-// Métodos getters
 QString Usuario::getNome() const {
     return nome;
 }

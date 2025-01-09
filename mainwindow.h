@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +19,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_comboBox_currentTextChanged(const QString &arg1);
+    void onWeatherDataReceived();
+
 private:
     Ui::MainWindow *ui;
+    QNetworkAccessManager *manager;
+    QNetworkReply *reply;
 };
 #endif
