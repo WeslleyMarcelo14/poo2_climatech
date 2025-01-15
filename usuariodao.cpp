@@ -51,5 +51,27 @@ bool UsuarioDAO::inserirUsuario(const Usuario &usuario) {
     }
 }
 
+bool UsuarioDAO::validarLogin(const QString email, const QString senha){
+    if(!db.open() && !conectar()){
+        return false;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");
+    query.bindValue(":email", email);
+    query.bindValue(":senha", senha);
+
+    if(query.exec()){
+        if(query.next()){
+            qDebug() << "Usuário autenticado com sucesso";
+        } else {
+            qDebug() << "Usuário ou senha incorretos";
+        }
+    }else{
+        qDebug() << "Erro ao verificar usuário" << query.lastError().text();
+        return false;
+    }
+}
+
 
 

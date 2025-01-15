@@ -16,7 +16,10 @@ public:
 
     bool inserirUsuario(const Usuario &usuario);
 
+    bool validarLogin(const QString usuario, const QString login);
+
     bool conectar();
+
 
 private:
     QSqlDatabase db;

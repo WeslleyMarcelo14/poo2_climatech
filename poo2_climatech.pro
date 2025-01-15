@@ -13,6 +13,7 @@ CONFIG += c++17
 SOURCES += \
     clima.cpp \
     climadao.cpp \
+    loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     registerwindow.cpp \
@@ -22,12 +23,14 @@ SOURCES += \
 HEADERS += \
     clima.h \
     climadao.h \
+    loginwindow.h \
     mainwindow.h \
     registerwindow.h \
     usuario.h \
     usuariodao.h
 
 FORMS += \
+    loginwindow.ui \
     mainwindow.ui \
     registerwindow.ui
 

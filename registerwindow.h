@@ -19,6 +19,8 @@ public:
 private slots:
     void on_pushButton_registro_clicked();
 
+    void on_pushButton_irparalogin_clicked();
+
 private:
     Ui::registerwindow *ui;
     UsuarioDAO usuarioDAO;

@@ -33,3 +33,9 @@ void registerwindow::on_pushButton_registro_clicked()
         QMessageBox::critical(this, "Erro", "Erro ao registrar usuário.");
     }
 }
+
+void registerwindow::on_pushButton_irparalogin_clicked()
+{
+
+}
+
