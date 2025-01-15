@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    registerwindow registroWindow;
-    registroWindow.show();
+    // registerwindow registroWindow;
+    // registroWindow.show();
 
     loginwindow loginwindow;
     loginwindow.show();
