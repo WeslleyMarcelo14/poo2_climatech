@@ -71,6 +71,7 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
         qDebug() << "Erro ao verificar usuário" << query.lastError().text();
         return false;
     }
+    return false;
 }
 
 
