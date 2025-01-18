@@ -1,0 +1,13 @@
+release/clima.o
+release/climadao.o
+release/configuracoes.o
+release/loginwindow.o
+release/main.o
+release/mainwindow.o
+release/registerwindow.o
+release/usuario.o
+release/usuariodao.o
+release/moc_configuracoes.o
+release/moc_loginwindow.o
+release/moc_mainwindow.o
+release/moc_registerwindow.o

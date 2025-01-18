@@ -105,4 +105,23 @@ void MainWindow::onWeatherDataReceived() {
     reply->deleteLater();
 }
 
+void MainWindow::on_loginButton_clicked()
+{
+    log = new loginwindow(this);
+    log->show();
+}
+
+
+void MainWindow::on_regisButton_clicked()
+{
+    regis = new registerwindow(this);
+    regis->show();
+}
+
+
+void MainWindow::on_configButton_clicked()
+{
+    config = new Configuracoes(this);
+    config->show();
+}
 

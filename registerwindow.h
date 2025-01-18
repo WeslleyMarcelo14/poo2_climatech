@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "usuariodao.h"
+#include "loginwindow.h"
 
 namespace Ui {
 class registerwindow;
@@ -24,6 +25,7 @@ private slots:
 private:
     Ui::registerwindow *ui;
     UsuarioDAO usuarioDAO;
+    loginwindow *logw;
 };
 
 #endif

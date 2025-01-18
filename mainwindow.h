@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include "loginwindow.h"
+#include "registerwindow.h"
+#include "configuracoes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,9 +26,18 @@ private slots:
     void on_comboBox_currentTextChanged(const QString &arg1);
     void onWeatherDataReceived();
 
+    void on_loginButton_clicked();
+
+    void on_regisButton_clicked();
+
+    void on_configButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QNetworkAccessManager *manager;
     QNetworkReply *reply;
+    loginwindow *log;
+    registerwindow *regis;
+    Configuracoes *config;
 };
 #endif

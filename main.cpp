@@ -12,10 +12,11 @@ int main(int argc, char *argv[])
     // registerwindow registroWindow;
     // registroWindow.show();
 
-    loginwindow loginwindow;
-    loginwindow.show();
-    //MainWindow w;
-    //w.show();
+    //loginwindow loginwindow;
+    //loginwindow.show();
+
+    MainWindow w;
+    w.show();
 
     return a.exec();
 }

@@ -15,6 +15,7 @@ UsuarioDAO::~UsuarioDAO() {
 }
 
 bool UsuarioDAO::conectar() {
+
     db.setHostName("localhost");
     db.setPort(5432);
     db.setDatabaseName("postgres");

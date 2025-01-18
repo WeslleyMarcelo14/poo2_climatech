@@ -1,0 +1,13 @@
+debug/clima.o
+debug/climadao.o
+debug/configuracoes.o
+debug/loginwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/registerwindow.o
+debug/usuario.o
+debug/usuariodao.o
+debug/moc_configuracoes.o
+debug/moc_loginwindow.o
+debug/moc_mainwindow.o
+debug/moc_registerwindow.o

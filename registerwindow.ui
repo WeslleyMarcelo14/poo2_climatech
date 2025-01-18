@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>520</y>
+      <y>490</y>
       <width>235</width>
       <height>26</height>
      </rect>
@@ -27,11 +27,11 @@
      <string>Ir para Login</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>80</y>
+      <y>0</y>
       <width>481</width>
       <height>421</height>
      </rect>
@@ -114,7 +114,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

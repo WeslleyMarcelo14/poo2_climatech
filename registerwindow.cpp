@@ -36,6 +36,7 @@ void registerwindow::on_pushButton_registro_clicked()
 
 void registerwindow::on_pushButton_irparalogin_clicked()
 {
-
+    logw = new loginwindow(this);
+    logw->show();
 }
 
