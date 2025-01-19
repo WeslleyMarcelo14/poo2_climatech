@@ -169,13 +169,13 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>110</x>
        <y>60</y>
        <width>48</width>
-       <height>61</height>
+       <height>102</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -232,12 +232,72 @@
        <widget class="QComboBox" name="comboBox">
         <item>
          <property name="text">
+          <string>Apucarana</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Campo Mourão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Cornélio Procópio</string>
          </property>
         </item>
         <item>
          <property name="text">
+          <string>Curitiba</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dois Vizinhos</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Francisco Beltrão</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Guarapuava</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Londrina</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Medianeira</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pato Branco</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ponta Grossa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Santa Helena</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Toledo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string/>
          </property>
         </item>
        </widget>

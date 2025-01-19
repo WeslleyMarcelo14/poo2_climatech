@@ -56,6 +56,9 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
     if(!db.open() && !conectar()){
         return false;
     }
+    else{
+        return true;
+    }
 
     QSqlQuery query;
     query.prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");

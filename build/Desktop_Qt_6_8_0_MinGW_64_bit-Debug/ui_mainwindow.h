@@ -50,16 +50,16 @@ public:
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_humidade;
     QLabel *label_humidadevalor;
-    QWidget *widget;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_3;
     QLabel *label_4;
     QFrame *frame_2;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout;
     QLabel *label_localizacao;
     QComboBox *comboBox;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *loginButton;
     QSpacerItem *horizontalSpacer;
@@ -173,18 +173,18 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_7);
 
-        widget = new QWidget(frame_aplicacao);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(110, 60, 48, 61));
-        horizontalLayout_8 = new QHBoxLayout(widget);
+        layoutWidget2 = new QWidget(frame_aplicacao);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(110, 60, 48, 102));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_8->setObjectName("horizontalLayout_8");
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget2);
         label_3->setObjectName("label_3");
 
         horizontalLayout_8->addWidget(label_3);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget2);
         label_4->setObjectName("label_4");
 
         horizontalLayout_8->addWidget(label_4);
@@ -194,31 +194,43 @@ public:
         frame_2->setGeometry(QRect(20, 90, 761, 71));
         frame_2->setFrameShape(QFrame::Shape::StyledPanel);
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
-        layoutWidget2 = new QWidget(frame_2);
-        layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(10, 10, 411, 76));
-        horizontalLayout = new QHBoxLayout(layoutWidget2);
+        layoutWidget3 = new QWidget(frame_2);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(10, 10, 411, 76));
+        horizontalLayout = new QHBoxLayout(layoutWidget3);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_localizacao = new QLabel(layoutWidget2);
+        label_localizacao = new QLabel(layoutWidget3);
         label_localizacao->setObjectName("label_localizacao");
 
         horizontalLayout->addWidget(label_localizacao);
 
-        comboBox = new QComboBox(layoutWidget2);
+        comboBox = new QComboBox(layoutWidget3);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->setObjectName("comboBox");
 
         horizontalLayout->addWidget(comboBox);
 
-        layoutWidget3 = new QWidget(centralwidget);
-        layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(20, 40, 381, 31));
-        horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
+        layoutWidget4 = new QWidget(centralwidget);
+        layoutWidget4->setObjectName("layoutWidget4");
+        layoutWidget4->setGeometry(QRect(20, 40, 381, 31));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        loginButton = new QPushButton(layoutWidget3);
+        loginButton = new QPushButton(layoutWidget4);
         loginButton->setObjectName("loginButton");
 
         horizontalLayout_5->addWidget(loginButton);
@@ -227,7 +239,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer);
 
-        regisButton = new QPushButton(layoutWidget3);
+        regisButton = new QPushButton(layoutWidget4);
         regisButton->setObjectName("regisButton");
 
         horizontalLayout_5->addWidget(regisButton);
@@ -236,7 +248,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_2);
 
-        configButton = new QPushButton(layoutWidget3);
+        configButton = new QPushButton(layoutWidget4);
         configButton->setObjectName("configButton");
 
         horizontalLayout_5->addWidget(configButton);
@@ -269,8 +281,20 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt;\">\302\272</span></p><h2 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:700;\"></h2></body></html>", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt;\">C</span></p><h2 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:700;\"></h2></body></html>", nullptr));
         label_localizacao->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">Localiza\303\247\303\243o: </span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Corn\303\251lio Proc\303\263pio", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Londrina", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Apucarana", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Campo Mour\303\243o", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Corn\303\251lio Proc\303\263pio", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Curitiba", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Dois Vizinhos", nullptr));
+        comboBox->setItemText(5, QCoreApplication::translate("MainWindow", "Francisco Beltr\303\243o", nullptr));
+        comboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Guarapuava", nullptr));
+        comboBox->setItemText(7, QCoreApplication::translate("MainWindow", "Londrina", nullptr));
+        comboBox->setItemText(8, QCoreApplication::translate("MainWindow", "Medianeira", nullptr));
+        comboBox->setItemText(9, QCoreApplication::translate("MainWindow", "Pato Branco", nullptr));
+        comboBox->setItemText(10, QCoreApplication::translate("MainWindow", "Ponta Grossa", nullptr));
+        comboBox->setItemText(11, QCoreApplication::translate("MainWindow", "Santa Helena", nullptr));
+        comboBox->setItemText(12, QCoreApplication::translate("MainWindow", "Toledo", nullptr));
+        comboBox->setItemText(13, QString());
 
         loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         regisButton->setText(QCoreApplication::translate("MainWindow", "Registro", nullptr));
