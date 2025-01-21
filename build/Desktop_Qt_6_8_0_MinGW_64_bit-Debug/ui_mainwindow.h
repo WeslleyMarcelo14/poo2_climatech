@@ -29,37 +29,33 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QFrame *frame_aplicacao;
-    QLabel *label_clima;
+    QLabel *label_temperaturaAtual;
     QLabel *label_tempatual;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_valoressec;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_senstermica;
-    QLabel *label_senstermicaval;
+    QLabel *label_sensacao;
+    QLabel *label_sensacaoTermica;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_sensmax;
-    QLabel *label_sensmaxvalor;
+    QLabel *label_tempMax;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_sensmin;
-    QLabel *label_sensminvalor;
+    QLabel *label_tempMin;
     QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_vento;
-    QLabel *label_ventovalor;
+    QLabel *label_velocidadeVento;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_humidade;
-    QLabel *label_humidadevalor;
-    QWidget *layoutWidget2;
-    QHBoxLayout *horizontalLayout_8;
-    QLabel *label_3;
-    QLabel *label_4;
+    QLabel *label_umidade;
     QFrame *frame_2;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout;
     QLabel *label_localizacao;
     QComboBox *comboBox;
-    QWidget *layoutWidget4;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *loginButton;
     QSpacerItem *horizontalSpacer;
@@ -80,12 +76,15 @@ public:
         frame_aplicacao->setGeometry(QRect(20, 170, 761, 231));
         frame_aplicacao->setFrameShape(QFrame::Shape::StyledPanel);
         frame_aplicacao->setFrameShadow(QFrame::Shadow::Raised);
-        label_clima = new QLabel(frame_aplicacao);
-        label_clima->setObjectName("label_clima");
-        label_clima->setGeometry(QRect(30, 40, 91, 91));
+        label_temperaturaAtual = new QLabel(frame_aplicacao);
+        label_temperaturaAtual->setObjectName("label_temperaturaAtual");
+        label_temperaturaAtual->setGeometry(QRect(60, 40, 171, 91));
+        label_temperaturaAtual->setStyleSheet(QString::fromUtf8("font-size: 30px;        /* Tamanho do texto */\n"
+"font-weight: bold;      /* Negrito */\n"
+"color: #fff;         /* Cor do texto */"));
         label_tempatual = new QLabel(frame_aplicacao);
         label_tempatual->setObjectName("label_tempatual");
-        label_tempatual->setGeometry(QRect(20, 20, 151, 18));
+        label_tempatual->setGeometry(QRect(70, 10, 151, 18));
         layoutWidget = new QWidget(frame_aplicacao);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(40, 140, 611, 97));
@@ -94,15 +93,15 @@ public:
         horizontalLayout_valoressec->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_senstermica = new QLabel(layoutWidget);
-        label_senstermica->setObjectName("label_senstermica");
+        label_sensacao = new QLabel(layoutWidget);
+        label_sensacao->setObjectName("label_sensacao");
 
-        horizontalLayout_2->addWidget(label_senstermica);
+        horizontalLayout_2->addWidget(label_sensacao);
 
-        label_senstermicaval = new QLabel(layoutWidget);
-        label_senstermicaval->setObjectName("label_senstermicaval");
+        label_sensacaoTermica = new QLabel(layoutWidget);
+        label_sensacaoTermica->setObjectName("label_sensacaoTermica");
 
-        horizontalLayout_2->addWidget(label_senstermicaval);
+        horizontalLayout_2->addWidget(label_sensacaoTermica);
 
 
         horizontalLayout_valoressec->addLayout(horizontalLayout_2);
@@ -114,10 +113,10 @@ public:
 
         horizontalLayout_3->addWidget(label_sensmax);
 
-        label_sensmaxvalor = new QLabel(layoutWidget);
-        label_sensmaxvalor->setObjectName("label_sensmaxvalor");
+        label_tempMax = new QLabel(layoutWidget);
+        label_tempMax->setObjectName("label_tempMax");
 
-        horizontalLayout_3->addWidget(label_sensmaxvalor);
+        horizontalLayout_3->addWidget(label_tempMax);
 
 
         horizontalLayout_valoressec->addLayout(horizontalLayout_3);
@@ -129,17 +128,17 @@ public:
 
         horizontalLayout_4->addWidget(label_sensmin);
 
-        label_sensminvalor = new QLabel(layoutWidget);
-        label_sensminvalor->setObjectName("label_sensminvalor");
+        label_tempMin = new QLabel(layoutWidget);
+        label_tempMin->setObjectName("label_tempMin");
 
-        horizontalLayout_4->addWidget(label_sensminvalor);
+        horizontalLayout_4->addWidget(label_tempMin);
 
 
         horizontalLayout_valoressec->addLayout(horizontalLayout_4);
 
         layoutWidget1 = new QWidget(frame_aplicacao);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(190, 60, 221, 53));
+        layoutWidget1->setGeometry(QRect(390, 50, 221, 53));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -150,10 +149,10 @@ public:
 
         horizontalLayout_6->addWidget(label_vento);
 
-        label_ventovalor = new QLabel(layoutWidget1);
-        label_ventovalor->setObjectName("label_ventovalor");
+        label_velocidadeVento = new QLabel(layoutWidget1);
+        label_velocidadeVento->setObjectName("label_velocidadeVento");
 
-        horizontalLayout_6->addWidget(label_ventovalor);
+        horizontalLayout_6->addWidget(label_velocidadeVento);
 
 
         verticalLayout_2->addLayout(horizontalLayout_6);
@@ -165,47 +164,33 @@ public:
 
         horizontalLayout_7->addWidget(label_humidade);
 
-        label_humidadevalor = new QLabel(layoutWidget1);
-        label_humidadevalor->setObjectName("label_humidadevalor");
+        label_umidade = new QLabel(layoutWidget1);
+        label_umidade->setObjectName("label_umidade");
 
-        horizontalLayout_7->addWidget(label_humidadevalor);
+        horizontalLayout_7->addWidget(label_umidade);
 
 
         verticalLayout_2->addLayout(horizontalLayout_7);
-
-        layoutWidget2 = new QWidget(frame_aplicacao);
-        layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(110, 60, 48, 102));
-        horizontalLayout_8 = new QHBoxLayout(layoutWidget2);
-        horizontalLayout_8->setObjectName("horizontalLayout_8");
-        horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(layoutWidget2);
-        label_3->setObjectName("label_3");
-
-        horizontalLayout_8->addWidget(label_3);
-
-        label_4 = new QLabel(layoutWidget2);
-        label_4->setObjectName("label_4");
-
-        horizontalLayout_8->addWidget(label_4);
 
         frame_2 = new QFrame(centralwidget);
         frame_2->setObjectName("frame_2");
         frame_2->setGeometry(QRect(20, 90, 761, 71));
         frame_2->setFrameShape(QFrame::Shape::StyledPanel);
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
-        layoutWidget3 = new QWidget(frame_2);
-        layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(10, 10, 411, 76));
-        horizontalLayout = new QHBoxLayout(layoutWidget3);
+        layoutWidget2 = new QWidget(frame_2);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(10, 10, 411, 76));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_localizacao = new QLabel(layoutWidget3);
+        label_localizacao = new QLabel(layoutWidget2);
         label_localizacao->setObjectName("label_localizacao");
 
         horizontalLayout->addWidget(label_localizacao);
 
-        comboBox = new QComboBox(layoutWidget3);
+        comboBox = new QComboBox(layoutWidget2);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
@@ -224,13 +209,13 @@ public:
 
         horizontalLayout->addWidget(comboBox);
 
-        layoutWidget4 = new QWidget(centralwidget);
-        layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(20, 40, 381, 31));
-        horizontalLayout_5 = new QHBoxLayout(layoutWidget4);
+        layoutWidget3 = new QWidget(centralwidget);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(20, 40, 381, 31));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        loginButton = new QPushButton(layoutWidget4);
+        loginButton = new QPushButton(layoutWidget3);
         loginButton->setObjectName("loginButton");
 
         horizontalLayout_5->addWidget(loginButton);
@@ -239,7 +224,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer);
 
-        regisButton = new QPushButton(layoutWidget4);
+        regisButton = new QPushButton(layoutWidget3);
         regisButton->setObjectName("regisButton");
 
         horizontalLayout_5->addWidget(regisButton);
@@ -248,7 +233,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_2);
 
-        configButton = new QPushButton(layoutWidget4);
+        configButton = new QPushButton(layoutWidget3);
         configButton->setObjectName("configButton");
 
         horizontalLayout_5->addWidget(configButton);
@@ -266,35 +251,35 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label_clima->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:40pt;\">17</span></p><h2 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:48pt;\"><br/></h2></body></html>", nullptr));
+        label_temperaturaAtual->setText(QCoreApplication::translate("MainWindow", "     --\302\260C", nullptr));
         label_tempatual->setText(QCoreApplication::translate("MainWindow", "Temperatura Atual", nullptr));
-        label_senstermica->setText(QCoreApplication::translate("MainWindow", "Sensa\303\247\303\243o T\303\251rmica: ", nullptr));
-        label_senstermicaval->setText(QCoreApplication::translate("MainWindow", "17,5", nullptr));
+        label_sensacao->setText(QCoreApplication::translate("MainWindow", "Sensa\303\247\303\243o T\303\251rmica: ", nullptr));
+        label_sensacaoTermica->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
         label_sensmax->setText(QCoreApplication::translate("MainWindow", "M\303\241x: ", nullptr));
-        label_sensmaxvalor->setText(QCoreApplication::translate("MainWindow", "19,0", nullptr));
+        label_tempMax->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
         label_sensmin->setText(QCoreApplication::translate("MainWindow", "Min: ", nullptr));
-        label_sensminvalor->setText(QCoreApplication::translate("MainWindow", "17", nullptr));
+        label_tempMin->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
         label_vento->setText(QCoreApplication::translate("MainWindow", "Vento: ", nullptr));
-        label_ventovalor->setText(QCoreApplication::translate("MainWindow", "20", nullptr));
-        label_humidade->setText(QCoreApplication::translate("MainWindow", "Humidade: ", nullptr));
-        label_humidadevalor->setText(QCoreApplication::translate("MainWindow", "10", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt;\">\302\272</span></p><h2 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:20pt; font-weight:700;\"></h2></body></html>", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt;\">C</span></p><h2 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:700;\"></h2></body></html>", nullptr));
+        label_velocidadeVento->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
+        label_humidade->setText(QCoreApplication::translate("MainWindow", "Umidade: ", nullptr));
+        label_umidade->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
         label_localizacao->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">Localiza\303\247\303\243o: </span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Apucarana", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Campo Mour\303\243o", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Corn\303\251lio Proc\303\263pio", nullptr));
-        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Curitiba", nullptr));
-        comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Dois Vizinhos", nullptr));
-        comboBox->setItemText(5, QCoreApplication::translate("MainWindow", "Francisco Beltr\303\243o", nullptr));
-        comboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Guarapuava", nullptr));
-        comboBox->setItemText(7, QCoreApplication::translate("MainWindow", "Londrina", nullptr));
-        comboBox->setItemText(8, QCoreApplication::translate("MainWindow", "Medianeira", nullptr));
-        comboBox->setItemText(9, QCoreApplication::translate("MainWindow", "Pato Branco", nullptr));
-        comboBox->setItemText(10, QCoreApplication::translate("MainWindow", "Ponta Grossa", nullptr));
-        comboBox->setItemText(11, QCoreApplication::translate("MainWindow", "Santa Helena", nullptr));
-        comboBox->setItemText(12, QCoreApplication::translate("MainWindow", "Toledo", nullptr));
-        comboBox->setItemText(13, QString());
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Selecione", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "------------------", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Apucarana", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Campo Mour\303\243o", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Corn\303\251lio Proc\303\263pio", nullptr));
+        comboBox->setItemText(5, QCoreApplication::translate("MainWindow", "Curitiba", nullptr));
+        comboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Dois Vizinhos", nullptr));
+        comboBox->setItemText(7, QCoreApplication::translate("MainWindow", "Francisco Beltr\303\243o", nullptr));
+        comboBox->setItemText(8, QCoreApplication::translate("MainWindow", "Guarapuava", nullptr));
+        comboBox->setItemText(9, QCoreApplication::translate("MainWindow", "Londrina", nullptr));
+        comboBox->setItemText(10, QCoreApplication::translate("MainWindow", "Medianeira", nullptr));
+        comboBox->setItemText(11, QCoreApplication::translate("MainWindow", "Pato Branco", nullptr));
+        comboBox->setItemText(12, QCoreApplication::translate("MainWindow", "Ponta Grossa", nullptr));
+        comboBox->setItemText(13, QCoreApplication::translate("MainWindow", "Santa Helena", nullptr));
+        comboBox->setItemText(14, QCoreApplication::translate("MainWindow", "Toledo", nullptr));
+        comboBox->setItemText(15, QString());
 
         loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         regisButton->setText(QCoreApplication::translate("MainWindow", "Registro", nullptr));

@@ -63,6 +63,56 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject jsonObj = jsonDoc.object();
 
+    // Obtenção do nome da cidade
+    QString cidade = jsonObj["name"].toString();
+
+    QJsonObject mainObj = jsonObj["main"].toObject();
+    double temperatura = mainObj["temp"].toDouble() - 273.15;
+    double sensTermica = mainObj["feels_like"].toDouble() - 273.15;
+    double tempMin = mainObj["temp_min"].toDouble() - 273.15;
+    double tempMax = mainObj["temp_max"].toDouble() - 273.15;
+    double umidade = mainObj["humidity"].toDouble();
+
+    QJsonObject ventObj = jsonObj["wind"].toObject();
+    double velVento = ventObj["speed"].toDouble();
+
+    // Atualizar widgets da interface
+    ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °C");
+    ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °C");
+    ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °C");
+    ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °C");
+    ui->label_umidade->setText(QString::number(umidade, 'f', 0) + " %");
+    ui->label_velocidadeVento->setText(QString::number(velVento, 'f', 1) + " m/s");
+
+    // Opcional: exibir o nome da cidade no título da janela
+    this->setWindowTitle("Clima - " + cidade);
+
+    reply->deleteLater();
+}
+
+
+/*
+void MainWindow::onWeatherDataReceived() {
+    if (reply->error() != QNetworkReply::NoError) {
+        qDebug() << "Erro na requisição: " << reply->errorString();
+        reply->deleteLater();
+        return;
+    }
+
+    QByteArray response_data = reply->readAll();
+    qDebug() << "Resposta da API:" << response_data;
+
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(response_data);
+
+    if (!jsonDoc.isObject()) {
+        qDebug() << "Erro: a resposta não é um objeto JSON válido.";
+        reply->deleteLater();
+        return;
+    }
+
+    QJsonObject jsonObj = jsonDoc.object();
+
+
     // Obtenção do nome da cidade da API
     QString cidade = jsonObj["name"].toString();  // Extraindo o nome da cidade
     qDebug() << "Cidade: " << cidade;
@@ -104,6 +154,7 @@ void MainWindow::onWeatherDataReceived() {
 
     reply->deleteLater();
 }
+*/
 
 void MainWindow::on_loginButton_clicked()
 {
