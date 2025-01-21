@@ -18,6 +18,8 @@ public:
 
     bool validarLogin(const QString usuario, const QString login);
 
+    bool atualizarSenha(const Usuario &usuario);
+
     bool conectar();
 
 

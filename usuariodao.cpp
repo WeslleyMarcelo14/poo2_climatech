@@ -78,5 +78,25 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
     return false;
 }
 
+bool UsuarioDAO::atualizarSenha(const Usuario &usuario){
+    if(!db.isOpen() && !conectar()){
+        return false;
+    }
+
+    QSqlQuery query;
+
+    query.prepare("UPDATE usuario SET senha = :senha WHERE email = :email");
+
+    query.bindValue(":senha", usuario.getSenha());
+    query.bindValue(":email", usuario.getEmail());
+
+    if(query.exec()){
+        qDebug() << "Senha Atualizada com sucesso";
+        return true;
+    } else{
+        qDebug() << "Erro ao atualizar a senha:" << query.lastError().text();
+        return false;
+    }
+}
 
 
