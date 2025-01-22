@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "registerwindow.h"
 #include "loginwindow.h"
-#include "usuariodao.h"
-#include "usuario.h"
 
 #include <QApplication>
 

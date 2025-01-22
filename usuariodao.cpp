@@ -99,4 +99,26 @@ bool UsuarioDAO::atualizarSenha(const Usuario &usuario){
     }
 }
 
+bool UsuarioDAO::removerUsuario(const Usuario &usuario){
+    if(!db.isOpen() && !conectar()){
+        return false;
+    }
+
+    QSqlQuery query;
+
+    query.prepare("DELETE FROM usuario WHERE email = :email AND senha = :senha");
+
+    query.bindValue(":email", usuario.getEmail());
+    query.bindValue(":senha", usuario.getSenha());
+
+    if(query.exec()){
+        qDebug() << "Usuário removido com sucesso";
+        return true;
+    } else{
+        qDebug() << "Erro ao remover usuário:" << query.lastError().text();
+        return false;
+    }
+}
+
+
 

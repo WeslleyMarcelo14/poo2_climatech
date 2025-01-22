@@ -20,6 +20,8 @@ public:
 
     bool atualizarSenha(const Usuario &usuario);
 
+    bool removerUsuario(const Usuario &usuario);
+
     bool conectar();
 
 
