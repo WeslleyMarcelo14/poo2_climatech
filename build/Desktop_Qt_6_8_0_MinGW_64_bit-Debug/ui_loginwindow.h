@@ -80,6 +80,7 @@ public:
 
         lineEdit_loginsenha = new QLineEdit(layoutWidget);
         lineEdit_loginsenha->setObjectName("lineEdit_loginsenha");
+        lineEdit_loginsenha->setEchoMode(QLineEdit::EchoMode::Password);
 
         horizontalLayout_6->addWidget(lineEdit_loginsenha);
 
@@ -100,7 +101,7 @@ public:
         loginwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(loginwindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 23));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         loginwindow->setMenuBar(menubar);
         statusbar = new QStatusBar(loginwindow);
         statusbar->setObjectName("statusbar");

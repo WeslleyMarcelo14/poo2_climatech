@@ -86,7 +86,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_senha"/>
+            <widget class="QLineEdit" name="lineEdit_senha">
+             <property name="echoMode">
+              <enum>QLineEdit::EchoMode::Password</enum>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -106,6 +110,32 @@
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="UpdateButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>430</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alterar senha</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>430</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

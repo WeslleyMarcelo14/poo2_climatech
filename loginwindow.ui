@@ -50,7 +50,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_loginsenha"/>
+          <widget class="QLineEdit" name="lineEdit_loginsenha">
+           <property name="echoMode">
+            <enum>QLineEdit::EchoMode::Password</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -85,7 +89,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

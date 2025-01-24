@@ -44,6 +44,8 @@ public:
     QLineEdit *lineEdit_senha;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *pushButton_registro;
+    QPushButton *UpdateButton;
+    QPushButton *DeleteButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -111,6 +113,7 @@ public:
 
         lineEdit_senha = new QLineEdit(layoutWidget);
         lineEdit_senha->setObjectName("lineEdit_senha");
+        lineEdit_senha->setEchoMode(QLineEdit::EchoMode::Password);
 
         horizontalLayout_3->addWidget(lineEdit_senha);
 
@@ -133,6 +136,12 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_4);
 
+        UpdateButton = new QPushButton(centralwidget);
+        UpdateButton->setObjectName("UpdateButton");
+        UpdateButton->setGeometry(QRect(160, 430, 111, 29));
+        DeleteButton = new QPushButton(centralwidget);
+        DeleteButton->setObjectName("DeleteButton");
+        DeleteButton->setGeometry(QRect(560, 430, 83, 29));
         registerwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(registerwindow);
         menubar->setObjectName("menubar");
@@ -156,6 +165,8 @@ public:
         label_email->setText(QCoreApplication::translate("registerwindow", "E-mail: ", nullptr));
         label_senha->setText(QCoreApplication::translate("registerwindow", "Senha: ", nullptr));
         pushButton_registro->setText(QCoreApplication::translate("registerwindow", "Registrar", nullptr));
+        UpdateButton->setText(QCoreApplication::translate("registerwindow", "Alterar senha", nullptr));
+        DeleteButton->setText(QCoreApplication::translate("registerwindow", "Delete", nullptr));
     } // retranslateUi
 
 };
