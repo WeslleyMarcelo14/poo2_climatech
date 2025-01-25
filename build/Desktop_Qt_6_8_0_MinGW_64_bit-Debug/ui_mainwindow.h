@@ -60,6 +60,10 @@ public:
     QPushButton *loginButton;
     QSpacerItem *horizontalSpacer;
     QPushButton *regisButton;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *UpdateButton;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *DeleteButton;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *configButton;
     QStatusBar *statusbar;
@@ -73,7 +77,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         frame_aplicacao = new QFrame(centralwidget);
         frame_aplicacao->setObjectName("frame_aplicacao");
-        frame_aplicacao->setGeometry(QRect(20, 170, 761, 231));
+        frame_aplicacao->setGeometry(QRect(20, 200, 761, 231));
         frame_aplicacao->setFrameShape(QFrame::Shape::StyledPanel);
         frame_aplicacao->setFrameShadow(QFrame::Shadow::Raised);
         label_temperaturaAtual = new QLabel(frame_aplicacao);
@@ -84,7 +88,7 @@ public:
 "color: #fff;         /* Cor do texto */"));
         label_tempatual = new QLabel(frame_aplicacao);
         label_tempatual->setObjectName("label_tempatual");
-        label_tempatual->setGeometry(QRect(70, 10, 151, 18));
+        label_tempatual->setGeometry(QRect(30, 20, 191, 31));
         layoutWidget = new QWidget(frame_aplicacao);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(40, 140, 611, 97));
@@ -174,12 +178,12 @@ public:
 
         frame_2 = new QFrame(centralwidget);
         frame_2->setObjectName("frame_2");
-        frame_2->setGeometry(QRect(20, 90, 761, 71));
+        frame_2->setGeometry(QRect(20, 90, 761, 91));
         frame_2->setFrameShape(QFrame::Shape::StyledPanel);
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
         layoutWidget2 = new QWidget(frame_2);
         layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(10, 10, 411, 76));
+        layoutWidget2->setGeometry(QRect(10, 30, 411, 76));
         horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -211,7 +215,7 @@ public:
 
         layoutWidget3 = new QWidget(centralwidget);
         layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(20, 40, 381, 31));
+        layoutWidget3->setGeometry(QRect(20, 40, 751, 31));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -228,6 +232,24 @@ public:
         regisButton->setObjectName("regisButton");
 
         horizontalLayout_5->addWidget(regisButton);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_3);
+
+        UpdateButton = new QPushButton(layoutWidget3);
+        UpdateButton->setObjectName("UpdateButton");
+
+        horizontalLayout_5->addWidget(UpdateButton);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_4);
+
+        DeleteButton = new QPushButton(layoutWidget3);
+        DeleteButton->setObjectName("DeleteButton");
+
+        horizontalLayout_5->addWidget(DeleteButton);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -252,7 +274,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_temperaturaAtual->setText(QCoreApplication::translate("MainWindow", "     --\302\260C", nullptr));
-        label_tempatual->setText(QCoreApplication::translate("MainWindow", "Temperatura Atual", nullptr));
+        label_tempatual->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">Temperatura Atual</span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
         label_sensacao->setText(QCoreApplication::translate("MainWindow", "Sensa\303\247\303\243o T\303\251rmica: ", nullptr));
         label_sensacaoTermica->setText(QCoreApplication::translate("MainWindow", "--", nullptr));
         label_sensmax->setText(QCoreApplication::translate("MainWindow", "M\303\241x: ", nullptr));
@@ -283,6 +305,8 @@ public:
 
         loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         regisButton->setText(QCoreApplication::translate("MainWindow", "Registro", nullptr));
+        UpdateButton->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
+        DeleteButton->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         configButton->setText(QCoreApplication::translate("MainWindow", "Config", nullptr));
     } // retranslateUi
 

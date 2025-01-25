@@ -176,3 +176,17 @@ void MainWindow::on_configButton_clicked()
     config->show();
 }
 
+
+void MainWindow::on_UpdateButton_clicked()
+{
+    update = new UpdateWindow(this);
+    update->show();
+}
+
+
+void MainWindow::on_DeleteButton_clicked()
+{
+    del = new DeleteWindow(this);
+    del->show();
+}
+

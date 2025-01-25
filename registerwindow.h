@@ -22,10 +22,6 @@ private slots:
 
     void on_pushButton_irparalogin_clicked();
 
-    void on_UpdateButton_clicked();
-
-    void on_DeleteButton_clicked();
-
 private:
     Ui::registerwindow *ui;
     UsuarioDAO usuarioDAO;

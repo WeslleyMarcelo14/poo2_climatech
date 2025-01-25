@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>170</y>
+      <y>200</y>
       <width>761</width>
       <height>231</height>
      </rect>
@@ -52,8 +52,8 @@ color: #fff;         /* Cor do texto */</string>
       <rect>
        <x>30</x>
        <y>20</y>
-       <width>181</width>
-       <height>18</height>
+       <width>191</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
@@ -181,7 +181,7 @@ color: #fff;         /* Cor do texto */</string>
       <x>20</x>
       <y>90</y>
       <width>761</width>
-      <height>71</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -196,7 +196,7 @@ color: #fff;         /* Cor do texto */</string>
        <x>10</x>
        <y>30</y>
        <width>411</width>
-       <height>21</height>
+       <height>76</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -299,7 +299,7 @@ color: #fff;         /* Cor do texto */</string>
      <rect>
       <x>20</x>
       <y>40</y>
-      <width>381</width>
+      <width>751</width>
       <height>31</height>
      </rect>
     </property>
@@ -328,6 +328,46 @@ color: #fff;         /* Cor do texto */</string>
       <widget class="QPushButton" name="regisButton">
        <property name="text">
         <string>Registro</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="UpdateButton">
+       <property name="text">
+        <string>Update</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DeleteButton">
+       <property name="text">
+        <string>Delete</string>
        </property>
       </widget>
      </item>

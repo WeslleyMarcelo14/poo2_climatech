@@ -7,6 +7,8 @@
 #include "loginwindow.h"
 #include "registerwindow.h"
 #include "configuracoes.h"
+#include "updatewindow.h"
+#include "deletewindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -32,6 +34,10 @@ private slots:
 
     void on_configButton_clicked();
 
+    void on_UpdateButton_clicked();
+
+    void on_DeleteButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QNetworkAccessManager *manager;
@@ -39,5 +45,7 @@ private:
     loginwindow *log;
     registerwindow *regis;
     Configuracoes *config;
+    UpdateWindow *update;
+    DeleteWindow *del;
 };
 #endif
