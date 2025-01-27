@@ -27,21 +27,21 @@ class Ui_Configuracoes
 public:
     QWidget *centralwidget;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label_4;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_5;
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_3;
     QLabel *label_3;
-    QComboBox *comboBox_2;
-    QWidget *widget3;
+    QComboBox *Box_unidade;
+    QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_2;
     QComboBox *comboBox;
@@ -58,79 +58,79 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(250, 10, 221, 71));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(120, 300, 114, 88));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(120, 300, 114, 88));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName("label_4");
 
         verticalLayout->addWidget(label_4);
 
-        radioButton = new QRadioButton(widget);
+        radioButton = new QRadioButton(layoutWidget);
         radioButton->setObjectName("radioButton");
 
         verticalLayout->addWidget(radioButton);
 
-        radioButton_2 = new QRadioButton(widget);
+        radioButton_2 = new QRadioButton(layoutWidget);
         radioButton_2->setObjectName("radioButton_2");
 
         verticalLayout->addWidget(radioButton_2);
 
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(470, 310, 131, 81));
-        verticalLayout_2 = new QVBoxLayout(widget1);
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(470, 310, 131, 88));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_5 = new QLabel(widget1);
+        label_5 = new QLabel(layoutWidget1);
         label_5->setObjectName("label_5");
 
         verticalLayout_2->addWidget(label_5);
 
-        radioButton_3 = new QRadioButton(widget1);
+        radioButton_3 = new QRadioButton(layoutWidget1);
         radioButton_3->setObjectName("radioButton_3");
 
         verticalLayout_2->addWidget(radioButton_3);
 
-        radioButton_4 = new QRadioButton(widget1);
+        radioButton_4 = new QRadioButton(layoutWidget1);
         radioButton_4->setObjectName("radioButton_4");
 
         verticalLayout_2->addWidget(radioButton_4);
 
-        widget2 = new QWidget(centralwidget);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(490, 130, 91, 61));
-        verticalLayout_3 = new QVBoxLayout(widget2);
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(490, 130, 91, 61));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget2);
         verticalLayout_3->setObjectName("verticalLayout_3");
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(widget2);
+        label_3 = new QLabel(layoutWidget2);
         label_3->setObjectName("label_3");
 
         verticalLayout_3->addWidget(label_3);
 
-        comboBox_2 = new QComboBox(widget2);
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->setObjectName("comboBox_2");
+        Box_unidade = new QComboBox(layoutWidget2);
+        Box_unidade->addItem(QString());
+        Box_unidade->addItem(QString());
+        Box_unidade->addItem(QString());
+        Box_unidade->setObjectName("Box_unidade");
 
-        verticalLayout_3->addWidget(comboBox_2);
+        verticalLayout_3->addWidget(Box_unidade);
 
-        widget3 = new QWidget(centralwidget);
-        widget3->setObjectName("widget3");
-        widget3->setGeometry(QRect(120, 130, 111, 61));
-        verticalLayout_4 = new QVBoxLayout(widget3);
+        layoutWidget3 = new QWidget(centralwidget);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(120, 130, 111, 61));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget3);
         verticalLayout_4->setObjectName("verticalLayout_4");
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(widget3);
+        label_2 = new QLabel(layoutWidget3);
         label_2->setObjectName("label_2");
 
         verticalLayout_4->addWidget(label_2);
 
-        comboBox = new QComboBox(widget3);
+        comboBox = new QComboBox(layoutWidget3);
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
@@ -163,9 +163,9 @@ public:
         radioButton_3->setText(QCoreApplication::translate("Configuracoes", "Permitir", nullptr));
         radioButton_4->setText(QCoreApplication::translate("Configuracoes", "N\303\243o Permitir", nullptr));
         label_3->setText(QCoreApplication::translate("Configuracoes", "Unidade", nullptr));
-        comboBox_2->setItemText(0, QCoreApplication::translate("Configuracoes", "\302\260C", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("Configuracoes", "\302\260F", nullptr));
-        comboBox_2->setItemText(2, QCoreApplication::translate("Configuracoes", "K", nullptr));
+        Box_unidade->setItemText(0, QCoreApplication::translate("Configuracoes", "\302\260C", nullptr));
+        Box_unidade->setItemText(1, QCoreApplication::translate("Configuracoes", "\302\260F", nullptr));
+        Box_unidade->setItemText(2, QCoreApplication::translate("Configuracoes", "K", nullptr));
 
         label_2->setText(QCoreApplication::translate("Configuracoes", "Idioma", nullptr));
         comboBox->setItemText(0, QCoreApplication::translate("Configuracoes", "Portugu\303\252s", nullptr));

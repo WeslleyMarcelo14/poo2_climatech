@@ -273,7 +273,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label_temperaturaAtual->setText(QCoreApplication::translate("MainWindow", "     --\302\260C", nullptr));
+        label_temperaturaAtual->setText(QCoreApplication::translate("MainWindow", "     --", nullptr));
         label_tempatual->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">Temperatura Atual</span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
         label_sensacao->setText(QCoreApplication::translate("MainWindow", "Sensa\303\247\303\243o T\303\251rmica: ", nullptr));
         label_sensacaoTermica->setText(QCoreApplication::translate("MainWindow", "--", nullptr));

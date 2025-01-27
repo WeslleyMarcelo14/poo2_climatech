@@ -14,9 +14,15 @@ class Configuracoes : public QMainWindow
 public:
     explicit Configuracoes(QWidget *parent = nullptr);
     ~Configuracoes();
+    QString configtemp;
+
+private slots:
+
+    void on_Box_unidade_currentTextChanged(const QString &arg1);
 
 private:
     Ui::Configuracoes *ui;
+
 };
 
 #endif // CONFIGURACOES_H

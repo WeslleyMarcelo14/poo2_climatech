@@ -44,7 +44,7 @@ font-weight: bold;      /* Negrito */
 color: #fff;         /* Cor do texto */</string>
      </property>
      <property name="text">
-      <string>     --°C</string>
+      <string>     --</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_tempatual">

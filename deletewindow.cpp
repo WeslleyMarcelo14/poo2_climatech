@@ -21,10 +21,10 @@ void DeleteWindow::on_deletarButton_clicked()
     // Obtendo os campos da interface
     QString nome = ui->lineEdit_nome->text();
     QString email = ui->lineEdit_email->text();
-    QString novaSenha = ui->lineEdit_senha->text();
+    QString senha = ui->lineEdit_senha->text();
 
     // Verificando se os campos estão preenchidos
-    if (nome.isEmpty() ||email.isEmpty() || novaSenha.isEmpty()) {
+    if (nome.isEmpty() ||email.isEmpty() || senha.isEmpty()) {
         QMessageBox::warning(this, "Erro", "Por favor, preencha todos os campos.");
         return;
     }
@@ -33,7 +33,7 @@ void DeleteWindow::on_deletarButton_clicked()
     Usuario usuario;
     usuario.setNome(nome);
     usuario.setEmail(email);
-    usuario.setSenha(novaSenha); // Caso use hash, aplique a função aqui, ex: `usuario.setSenha(gerarHashSenha(novaSenha));`
+    usuario.setSenha(senha); // Caso use hash, aplique a função aqui, ex: `usuario.setSenha(gerarHashSenha(novaSenha));`
 
     // Chamando a função de atualização no DAO
     if (usuarioDAO.removerUsuario(usuario)) {

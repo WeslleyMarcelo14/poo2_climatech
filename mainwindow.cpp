@@ -8,6 +8,7 @@
 #include <QJsonArray>
 #include "clima.h"
 #include "climadao.h"
+#include "configuracoes.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -15,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    config = new Configuracoes(this);
 }
 
 MainWindow::~MainWindow()
@@ -77,10 +79,40 @@ void MainWindow::onWeatherDataReceived() {
     double velVento = ventObj["speed"].toDouble();
 
     // Atualizar widgets da interface
-    ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °C");
-    ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °C");
-    ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °C");
-    ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °C");
+
+    qDebug() << "Valor de configtemp:" << config->configtemp;
+
+    if(config->configtemp == "°C"){
+        ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °C");
+        ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °C");
+        ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °C");
+        ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °C");
+
+    }
+    else if(config->configtemp == "°F"){
+        temperatura = 1.8*temperatura + 32;
+        sensTermica = 1.8*sensTermica + 32;
+        tempMin = 1.8*tempMin + 32;
+        tempMax = 1.8*tempMax + 32;
+        ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °F");
+        ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °F");
+        ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °F");
+        ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °F");
+    }
+    else if(config->configtemp == "K"){
+        temperatura = temperatura + 273.15;
+        sensTermica = sensTermica + 273.15;
+        tempMin = tempMin + 273.15;
+        tempMax = tempMax + 273.15;
+        ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " K");
+        ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " K");
+        ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " K");
+        ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " K");
+    }
+    else{
+        qDebug() << "Valor de configtemp não corresponde a nenhuma unidade conhecida.";
+    }
+
     ui->label_umidade->setText(QString::number(umidade, 'f', 0) + " %");
     ui->label_velocidadeVento->setText(QString::number(velVento, 'f', 1) + " m/s");
 
@@ -172,7 +204,6 @@ void MainWindow::on_regisButton_clicked()
 
 void MainWindow::on_configButton_clicked()
 {
-    config = new Configuracoes(this);
     config->show();
 }
 
