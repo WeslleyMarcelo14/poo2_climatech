@@ -66,6 +66,8 @@ public:
     QPushButton *DeleteButton;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *configButton;
+    QLabel *label;
+    QLabel *label_nomeUsuario;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -77,7 +79,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         frame_aplicacao = new QFrame(centralwidget);
         frame_aplicacao->setObjectName("frame_aplicacao");
-        frame_aplicacao->setGeometry(QRect(20, 200, 761, 231));
+        frame_aplicacao->setGeometry(QRect(20, 230, 761, 231));
         frame_aplicacao->setFrameShape(QFrame::Shape::StyledPanel);
         frame_aplicacao->setFrameShadow(QFrame::Shadow::Raised);
         label_temperaturaAtual = new QLabel(frame_aplicacao);
@@ -178,7 +180,7 @@ public:
 
         frame_2 = new QFrame(centralwidget);
         frame_2->setObjectName("frame_2");
-        frame_2->setGeometry(QRect(20, 90, 761, 91));
+        frame_2->setGeometry(QRect(20, 120, 761, 91));
         frame_2->setFrameShape(QFrame::Shape::StyledPanel);
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
         layoutWidget2 = new QWidget(frame_2);
@@ -215,7 +217,7 @@ public:
 
         layoutWidget3 = new QWidget(centralwidget);
         layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(20, 40, 751, 31));
+        layoutWidget3->setGeometry(QRect(20, 70, 751, 31));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -260,6 +262,12 @@ public:
 
         horizontalLayout_5->addWidget(configButton);
 
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(40, 30, 101, 20));
+        label_nomeUsuario = new QLabel(centralwidget);
+        label_nomeUsuario->setObjectName("label_nomeUsuario");
+        label_nomeUsuario->setGeometry(QRect(110, 20, 241, 41));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -308,6 +316,8 @@ public:
         UpdateButton->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         DeleteButton->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         configButton->setText(QCoreApplication::translate("MainWindow", "Config", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Usu\303\241rio:", nullptr));
+        label_nomeUsuario->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"left\"><span style=\" font-size:14pt;\">--</span></p><h3 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:700;\"><br/></h3></body></html>", nullptr));
     } // retranslateUi
 
 };

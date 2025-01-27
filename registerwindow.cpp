@@ -30,6 +30,9 @@ void registerwindow::on_pushButton_registro_clicked()
 
     if (usuarioDAO.inserirUsuario(novoUsuario)) {
         QMessageBox::information(this, "Sucesso", "Usuário registrado com sucesso!");
+        ui->lineEdit_nome->clear();
+        ui->lineEdit_email->clear();
+        ui->lineEdit_senha->clear();
     } else {
         QMessageBox::critical(this, "Erro", "Erro ao registrar usuário.");
     }

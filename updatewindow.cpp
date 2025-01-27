@@ -21,6 +21,7 @@ void UpdateWindow::on_AlterarButton_clicked()
     QString nome = ui->lineEdit_nome->text();
     QString email = ui->lineEdit_email->text();
     QString novaSenha = ui->lineEdit_novasenha->text();
+    QString cnovaSenha = ui->lineEdit_cnovasenha->text();
 
     // Verificando se os campos estão preenchidos
     if (nome.isEmpty() ||email.isEmpty() || novaSenha.isEmpty()) {
@@ -28,15 +29,24 @@ void UpdateWindow::on_AlterarButton_clicked()
         return;
     }
 
+    if (novaSenha != cnovaSenha){
+        QMessageBox::warning(this, "Erro", "Confirme novamente a senha");
+        return;
+    }
+
     // Criando um objeto Usuario com os dados fornecidos
     Usuario usuario;
     usuario.setNome(nome);
     usuario.setEmail(email);
-    usuario.setSenha(novaSenha); // Caso use hash, aplique a função aqui, ex: `usuario.setSenha(gerarHashSenha(novaSenha));`
+    usuario.setSenha(novaSenha);
 
     // Chamando a função de atualização no DAO
     if (usuarioDAO.atualizarSenha(usuario)) {
         QMessageBox::information(this, "Sucesso", "Senha atualizada com sucesso!");
+        ui->lineEdit_nome->clear();
+        ui->lineEdit_email->clear();
+        ui->lineEdit_novasenha->clear();
+        ui->lineEdit_cnovasenha->clear();
     } else {
         QMessageBox::critical(this, "Erro", "Erro ao atualizar a senha. Verifique os dados e tente novamente.");
     }

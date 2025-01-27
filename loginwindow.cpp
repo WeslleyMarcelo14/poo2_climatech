@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include "usuariodao.h"
 
+
 loginwindow::loginwindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::loginwindow)
@@ -32,6 +33,7 @@ void loginwindow::on_pushButton_login_clicked()
     }
     if(usuarioDao.validarLogin(email, senha)){
         QMessageBox::warning(this, "Sucesso", "Login realizado com sucesso.");
+
     } else{
         QMessageBox::warning(this, "Erro", "Usuário ou Senha incorretos.");
     }

@@ -38,6 +38,9 @@ void DeleteWindow::on_deletarButton_clicked()
     // Chamando a função de atualização no DAO
     if (usuarioDAO.removerUsuario(usuario)) {
         QMessageBox::information(this, "Sucesso", "Usuario deletado com sucesso!");
+        ui->lineEdit_nome->clear();
+        ui->lineEdit_email->clear();
+        ui->lineEdit_senha->clear();
     } else {
         QMessageBox::critical(this, "Erro", "Erro ao deletar usuario. Verifique os dados e tente novamente.");
     }

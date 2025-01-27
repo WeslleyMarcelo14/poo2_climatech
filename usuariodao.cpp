@@ -56,9 +56,6 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
     if(!db.open() && !conectar()){
         return false;
     }
-    else{
-        return true;
-    }
 
     QSqlQuery query;
     query.prepare("SELECT * FROM usuario WHERE email = :email AND senha = :senha");
@@ -66,10 +63,13 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
     query.bindValue(":senha", senha);
 
     if(query.exec()){
-        if(query.next()){
-            qDebug() << "Usuário autenticado com sucesso";
+        if(query.next()){ // Verifica se encontrou um resultado
+            QString nomeUsuario = query.value("nome").toString(); // Armazena o nome do usuário
+            qDebug() << "Usuário autenticado com sucesso. Nome:" << nomeUsuario;
+            return true;
         } else {
             qDebug() << "Usuário ou senha incorretos";
+            return false;
         }
     }else{
         qDebug() << "Erro ao verificar usuário" << query.lastError().text();
