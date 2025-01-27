@@ -4,11 +4,15 @@
 #include <QMainWindow>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include "mainwindow.h"
 #include "loginwindow.h"
 #include "registerwindow.h"
 #include "configuracoes.h"
 #include "updatewindow.h"
 #include "deletewindow.h"
+
+class loginwindow;
+class registerwindow;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,6 +27,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void setNomeUsuario(const QString &nome);
 
 private slots:
     void on_comboBox_currentTextChanged(const QString &arg1);

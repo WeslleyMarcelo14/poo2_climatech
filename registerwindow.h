@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "usuariodao.h"
 #include "loginwindow.h"
+class loginwindow;
 
 namespace Ui {
 class registerwindow;

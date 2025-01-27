@@ -14,7 +14,7 @@ class Configuracoes : public QMainWindow
 public:
     explicit Configuracoes(QWidget *parent = nullptr);
     ~Configuracoes();
-    QString configtemp;
+    QString configtemp = "°C";
 
 private slots:
 

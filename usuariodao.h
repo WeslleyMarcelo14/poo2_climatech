@@ -24,9 +24,13 @@ public:
 
     bool conectar();
 
+    QString getNomeUsuario();
+
 
 private:
     QSqlDatabase db;
+    QString nomeUsuario;
+    //Usuario user;
 };
 
 #endif

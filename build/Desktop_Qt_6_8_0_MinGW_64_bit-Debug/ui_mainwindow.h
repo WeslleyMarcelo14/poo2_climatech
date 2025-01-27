@@ -74,12 +74,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 500);
+        MainWindow->resize(800, 539);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         frame_aplicacao = new QFrame(centralwidget);
         frame_aplicacao->setObjectName("frame_aplicacao");
-        frame_aplicacao->setGeometry(QRect(20, 230, 761, 231));
+        frame_aplicacao->setGeometry(QRect(20, 250, 761, 231));
         frame_aplicacao->setFrameShape(QFrame::Shape::StyledPanel);
         frame_aplicacao->setFrameShadow(QFrame::Shadow::Raised);
         label_temperaturaAtual = new QLabel(frame_aplicacao);
@@ -180,7 +180,7 @@ public:
 
         frame_2 = new QFrame(centralwidget);
         frame_2->setObjectName("frame_2");
-        frame_2->setGeometry(QRect(20, 120, 761, 91));
+        frame_2->setGeometry(QRect(20, 140, 761, 91));
         frame_2->setFrameShape(QFrame::Shape::StyledPanel);
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
         layoutWidget2 = new QWidget(frame_2);
@@ -217,7 +217,7 @@ public:
 
         layoutWidget3 = new QWidget(centralwidget);
         layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(20, 70, 751, 31));
+        layoutWidget3->setGeometry(QRect(20, 90, 751, 31));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -317,7 +317,7 @@ public:
         DeleteButton->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         configButton->setText(QCoreApplication::translate("MainWindow", "Config", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Usu\303\241rio:", nullptr));
-        label_nomeUsuario->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"left\"><span style=\" font-size:14pt;\">--</span></p><h3 style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:700;\"><br/></h3></body></html>", nullptr));
+        label_nomeUsuario->setText(QCoreApplication::translate("MainWindow", "<h1>teste<h1>", nullptr));
     } // retranslateUi
 
 };

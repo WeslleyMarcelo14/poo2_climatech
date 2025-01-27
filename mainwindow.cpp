@@ -24,6 +24,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::setNomeUsuario(const QString &nome){
+    ui->label_nomeUsuario->setText(nome);
+    ui->label_nomeUsuario->setStyleSheet("font-size: 20px; font-weight: bold; color: white;");
+}
+
 void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
 {
     QString apiKey, cidade;
@@ -124,7 +129,7 @@ void MainWindow::onWeatherDataReceived() {
 
 void MainWindow::on_loginButton_clicked()
 {
-    log = new loginwindow(this);
+    log = new loginwindow(this, this);
     log->show();
 }
 

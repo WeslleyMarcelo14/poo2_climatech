@@ -64,7 +64,7 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
 
     if(query.exec()){
         if(query.next()){ // Verifica se encontrou um resultado
-            QString nomeUsuario = query.value("nome").toString(); // Armazena o nome do usuário
+            nomeUsuario = query.value("nome").toString(); // Armazena o nome do usuário
             qDebug() << "Usuário autenticado com sucesso. Nome:" << nomeUsuario;
             return true;
         } else {
@@ -119,6 +119,11 @@ bool UsuarioDAO::removerUsuario(const Usuario &usuario){
         return false;
     }
 }
+
+QString UsuarioDAO::getNomeUsuario(){
+    return nomeUsuario;
+}
+
 
 
 
