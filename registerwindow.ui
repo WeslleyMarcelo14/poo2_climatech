@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>495</width>
+    <height>396</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QPushButton" name="pushButton_irparalogin">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>490</y>
-      <width>235</width>
+      <x>100</x>
+      <y>300</y>
+      <width>277</width>
       <height>26</height>
      </rect>
     </property>
@@ -27,103 +27,147 @@
      <string>Ir para Login</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>0</y>
-      <width>481</width>
-      <height>421</height>
+      <x>80</x>
+      <y>90</y>
+      <width>321</width>
+      <height>201</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;Tela de Registro &lt;/span&gt;&lt;/p&gt;&lt;h2 align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:26pt; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLabel" name="label_nome">
-             <property name="text">
-              <string>Nome: </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_nome"/>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label_email_3">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Nome: </string>
+           </property>
+          </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QLabel" name="label_email">
-             <property name="text">
-              <string>E-mail: </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_email"/>
-           </item>
-          </layout>
+          <widget class="QLineEdit" name="lineEdit_nome">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(164, 249, 203);
+border-radius: 2px;
+color:black;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_email">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>E-mail: </string>
+           </property>
+          </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <widget class="QLabel" name="label_senha">
-             <property name="text">
-              <string>Senha: </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_senha">
-             <property name="echoMode">
-              <enum>QLineEdit::EchoMode::Password</enum>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLineEdit" name="lineEdit_email">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(164, 249, 203);
+border-radius: 2px;
+color:black;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_senha">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Senha: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_senha">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(164, 249, 203);
+border-radius: 2px;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::EchoMode::Password</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QPushButton" name="pushButton_registro">
-         <property name="text">
-          <string>Registrar</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="pushButton_registro">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Registrar</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label_login">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>341</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:700;&quot;&gt;Registro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>91</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/resource/resource/logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

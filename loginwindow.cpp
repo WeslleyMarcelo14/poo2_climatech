@@ -9,6 +9,9 @@ loginwindow::loginwindow(QWidget *parent, MainWindow *mainWindow)
     , ui(new Ui::loginwindow), mainWindow(mainWindow)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Tela de Login");
+
 }
 
 loginwindow::~loginwindow()

@@ -8,6 +8,8 @@ UpdateWindow::UpdateWindow(QWidget *parent)
     , ui(new Ui::UpdateWindow)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Tela de Alterar Senha");
 }
 
 UpdateWindow::~UpdateWindow()
@@ -17,14 +19,11 @@ UpdateWindow::~UpdateWindow()
 
 void UpdateWindow::on_AlterarButton_clicked()
 {
-    // Obtendo os campos da interface
-    QString nome = ui->lineEdit_nome->text();
-    QString email = ui->lineEdit_email->text();
-    QString novaSenha = ui->lineEdit_novasenha->text();
-    QString cnovaSenha = ui->lineEdit_cnovasenha->text();
+    QString email = ui->lineEdit_novaSenha->text();
+    QString novaSenha = ui->lineEdit_novaSenha->text();
+    QString cnovaSenha = ui->lineEdit_cnovaSenha->text();
 
-    // Verificando se os campos estão preenchidos
-    if (nome.isEmpty() ||email.isEmpty() || novaSenha.isEmpty()) {
+    if (email.isEmpty() || novaSenha.isEmpty()) {
         QMessageBox::warning(this, "Erro", "Por favor, preencha todos os campos.");
         return;
     }
@@ -36,17 +35,15 @@ void UpdateWindow::on_AlterarButton_clicked()
 
     // Criando um objeto Usuario com os dados fornecidos
     Usuario usuario;
-    usuario.setNome(nome);
     usuario.setEmail(email);
     usuario.setSenha(novaSenha);
 
     // Chamando a função de atualização no DAO
     if (usuarioDAO.atualizarSenha(usuario)) {
         QMessageBox::information(this, "Sucesso", "Senha atualizada com sucesso!");
-        ui->lineEdit_nome->clear();
-        ui->lineEdit_email->clear();
-        ui->lineEdit_novasenha->clear();
-        ui->lineEdit_cnovasenha->clear();
+        ui->lineEdit_novaSenha->clear();
+        ui->lineEdit_novaSenha->clear();
+        ui->lineEdit_cnovaSenha->clear();
     } else {
         QMessageBox::critical(this, "Erro", "Erro ao atualizar a senha. Verifique os dados e tente novamente.");
     }

@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     config = new Configuracoes(this);
+
+    this->setWindowTitle("Tela Principal");
 }
 
 MainWindow::~MainWindow()

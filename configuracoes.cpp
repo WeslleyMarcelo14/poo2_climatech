@@ -6,6 +6,8 @@ Configuracoes::Configuracoes(QWidget *parent)
     , ui(new Ui::Configuracoes)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Tela de Configurações");
 }
 
 Configuracoes::~Configuracoes()

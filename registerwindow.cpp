@@ -8,6 +8,8 @@ registerwindow::registerwindow(QWidget *parent)
     , ui(new Ui::registerwindow)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Tela de Registro");
 }
 
 registerwindow::~registerwindow()
@@ -33,6 +35,7 @@ void registerwindow::on_pushButton_registro_clicked()
         ui->lineEdit_nome->clear();
         ui->lineEdit_email->clear();
         ui->lineEdit_senha->clear();
+        this->close();
     } else {
         QMessageBox::critical(this, "Erro", "Erro ao registrar usuário.");
     }
