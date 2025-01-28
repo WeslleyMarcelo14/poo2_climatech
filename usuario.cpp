@@ -23,7 +23,6 @@ QString Usuario::getSenha() const {
     return senha;
 }
 
-// Métodos setters
 void Usuario::setNome(const QString &nome) {
     this->nome = nome;
 }

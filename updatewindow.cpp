@@ -19,7 +19,7 @@ UpdateWindow::~UpdateWindow()
 
 void UpdateWindow::on_AlterarButton_clicked()
 {
-    QString email = ui->lineEdit_novaSenha->text();
+    QString email = ui->lineEdit_email->text();
     QString novaSenha = ui->lineEdit_novaSenha->text();
     QString cnovaSenha = ui->lineEdit_cnovaSenha->text();
 
@@ -33,15 +33,12 @@ void UpdateWindow::on_AlterarButton_clicked()
         return;
     }
 
-    // Criando um objeto Usuario com os dados fornecidos
     Usuario usuario;
     usuario.setEmail(email);
     usuario.setSenha(novaSenha);
 
-    // Chamando a função de atualização no DAO
     if (usuarioDAO.atualizarSenha(usuario)) {
         QMessageBox::information(this, "Sucesso", "Senha atualizada com sucesso!");
-        ui->lineEdit_novaSenha->clear();
         ui->lineEdit_novaSenha->clear();
         ui->lineEdit_cnovaSenha->clear();
     } else {

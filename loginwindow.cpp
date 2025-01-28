@@ -11,7 +11,6 @@ loginwindow::loginwindow(QWidget *parent, MainWindow *mainWindow)
     ui->setupUi(this);
 
     this->setWindowTitle("Tela de Login");
-
 }
 
 loginwindow::~loginwindow()
@@ -37,9 +36,8 @@ void loginwindow::on_pushButton_login_clicked()
     }
 
     if (usuarioDao.validarLogin(email, senha)) {
-        QString nome = usuarioDao.getNomeUsuario(); // Obtém o nome do usuário
+        QString nome = usuarioDao.getNomeUsuario();
         QMessageBox::information(this, "Login realizado com sucesso\n", "Bem-vindo, " + nome + "!!");
-        // Atualiza a label na MainWindow
         if (mainWindow) {
             qDebug() << "entrou aqui: " << nome;
             mainWindow->setNomeUsuario(nome);
@@ -47,7 +45,7 @@ void loginwindow::on_pushButton_login_clicked()
 
         this->close();
     } else {
-        QMessageBox::warning(this, "Erro", "Usuário ou senha incorretos.");
+        QMessageBox::warning(this, "Erro", "Usuário não encontrado ou dados incorretos.");
     }
 
 }

@@ -72,7 +72,6 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject jsonObj = jsonDoc.object();
 
-    // Obtenção do nome da cidade
     QString cidade = jsonObj["name"].toString();
 
     QJsonObject mainObj = jsonObj["main"].toObject();
@@ -84,8 +83,6 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject ventObj = jsonObj["wind"].toObject();
     double velVento = ventObj["speed"].toDouble();
-
-    // Atualizar widgets da interface
 
     qDebug() << "Valor de configtemp:" << config->configtemp;
 
@@ -123,7 +120,6 @@ void MainWindow::onWeatherDataReceived() {
     ui->label_umidade->setText(QString::number(umidade, 'f', 0) + " %");
     ui->label_velocidadeVento->setText(QString::number(velVento, 'f', 1) + " m/s");
 
-    // Opcional: exibir o nome da cidade no título da janela
     this->setWindowTitle("Clima - " + cidade);
 
     reply->deleteLater();

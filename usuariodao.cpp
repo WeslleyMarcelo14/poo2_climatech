@@ -63,8 +63,8 @@ bool UsuarioDAO::validarLogin(const QString email, const QString senha){
     query.bindValue(":senha", senha);
 
     if(query.exec()){
-        if(query.next()){ // Verifica se encontrou um resultado
-            nomeUsuario = query.value("nome").toString(); // Armazena o nome do usuário
+        if(query.next()){
+            nomeUsuario = query.value("nome").toString();
             qDebug() << "Usuário autenticado com sucesso. Nome:" << nomeUsuario;
             return true;
         } else {
