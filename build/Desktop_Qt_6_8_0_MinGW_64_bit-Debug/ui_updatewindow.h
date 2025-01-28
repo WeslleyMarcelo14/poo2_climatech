@@ -32,7 +32,7 @@ public:
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_email_3;
-    QLineEdit *lineEdit_nome;
+    QLineEdit *lineEdit_email;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_email;
     QLineEdit *lineEdit_novaSenha;
@@ -70,13 +70,13 @@ public:
 
         horizontalLayout_2->addWidget(label_email_3);
 
-        lineEdit_nome = new QLineEdit(layoutWidget_2);
-        lineEdit_nome->setObjectName("lineEdit_nome");
-        lineEdit_nome->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+        lineEdit_email = new QLineEdit(layoutWidget_2);
+        lineEdit_email->setObjectName("lineEdit_email");
+        lineEdit_email->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
 "border-radius: 2px;\n"
 "color:black;"));
 
-        horizontalLayout_2->addWidget(lineEdit_nome);
+        horizontalLayout_2->addWidget(lineEdit_email);
 
 
         verticalLayout_6->addLayout(horizontalLayout_2);
@@ -149,7 +149,7 @@ public:
     {
         UpdateWindow->setWindowTitle(QCoreApplication::translate("UpdateWindow", "MainWindow", nullptr));
         label_login->setText(QCoreApplication::translate("UpdateWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:700;\">Alterar</span></p></body></html>", nullptr));
-        label_email_3->setText(QCoreApplication::translate("UpdateWindow", "E-mail:           ", nullptr));
+        label_email_3->setText(QCoreApplication::translate("UpdateWindow", "E-mail:         ", nullptr));
         label_email->setText(QCoreApplication::translate("UpdateWindow", "Nova Senha:", nullptr));
         label_senha->setText(QCoreApplication::translate("UpdateWindow", "Conf. Senha:", nullptr));
         lineEdit_cnovaSenha->setText(QString());

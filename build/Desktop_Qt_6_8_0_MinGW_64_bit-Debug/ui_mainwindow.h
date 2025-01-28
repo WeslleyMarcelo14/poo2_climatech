@@ -317,7 +317,7 @@ public:
         DeleteButton->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         configButton->setText(QCoreApplication::translate("MainWindow", "Config", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Usu\303\241rio:", nullptr));
-        label_nomeUsuario->setText(QCoreApplication::translate("MainWindow", "<h1>teste<h1>", nullptr));
+        label_nomeUsuario->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><h1 style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700;\">N\303\243o Conectado</span></h1></body></html>", nullptr));
     } // retranslateUi
 
 };
