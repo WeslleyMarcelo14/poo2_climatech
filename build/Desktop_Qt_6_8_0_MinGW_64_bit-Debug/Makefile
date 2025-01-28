@@ -429,7 +429,8 @@ Makefile: ../../poo2_climatech.pro F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs
 		F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6Network.prl \
 		F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6Core.prl \
 		F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6EntryPoint.prl \
-		F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/features/build_pass.prf
+		F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/features/build_pass.prf \
+		../../resources.qrc
 	$(QMAKE) -o Makefile ..\..\poo2_climatech.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/features/spec_pre.prf:
 F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/features/device_config.prf:
@@ -791,6 +792,7 @@ F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6Network.prl:
 F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6Core.prl:
 F:/Programas/QtCreator/6.8.0/mingw_64/lib/Qt6EntryPoint.prl:
 F:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/features/build_pass.prf:
+../../resources.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\poo2_climatech.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

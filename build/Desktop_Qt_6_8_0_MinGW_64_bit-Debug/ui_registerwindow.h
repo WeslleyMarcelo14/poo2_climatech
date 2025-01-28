@@ -15,7 +15,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
@@ -28,117 +27,118 @@ class Ui_registerwindow
 public:
     QWidget *centralwidget;
     QPushButton *pushButton_irparalogin;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout_3;
-    QLabel *label;
-    QVBoxLayout *verticalLayout_2;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label_nome;
-    QLineEdit *lineEdit_nome;
+    QWidget *layoutWidget_2;
+    QVBoxLayout *verticalLayout_5;
+    QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_2;
+    QLabel *label_email_3;
+    QLineEdit *lineEdit_nome;
+    QHBoxLayout *horizontalLayout_7;
     QLabel *label_email;
     QLineEdit *lineEdit_email;
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_8;
     QLabel *label_senha;
     QLineEdit *lineEdit_senha;
-    QHBoxLayout *horizontalLayout_4;
     QPushButton *pushButton_registro;
-    QMenuBar *menubar;
+    QLabel *label_login;
+    QLabel *label;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *registerwindow)
     {
         if (registerwindow->objectName().isEmpty())
             registerwindow->setObjectName("registerwindow");
-        registerwindow->resize(800, 600);
+        registerwindow->resize(495, 396);
         centralwidget = new QWidget(registerwindow);
         centralwidget->setObjectName("centralwidget");
         pushButton_irparalogin = new QPushButton(centralwidget);
         pushButton_irparalogin->setObjectName("pushButton_irparalogin");
-        pushButton_irparalogin->setGeometry(QRect(290, 490, 235, 26));
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(160, 0, 481, 421));
-        verticalLayout_3 = new QVBoxLayout(layoutWidget);
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(layoutWidget);
-        label->setObjectName("label");
-
-        verticalLayout_3->addWidget(label);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        label_nome = new QLabel(layoutWidget);
-        label_nome->setObjectName("label_nome");
-
-        horizontalLayout->addWidget(label_nome);
-
-        lineEdit_nome = new QLineEdit(layoutWidget);
-        lineEdit_nome->setObjectName("lineEdit_nome");
-
-        horizontalLayout->addWidget(lineEdit_nome);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
+        pushButton_irparalogin->setGeometry(QRect(100, 300, 277, 26));
+        layoutWidget_2 = new QWidget(centralwidget);
+        layoutWidget_2->setObjectName("layoutWidget_2");
+        layoutWidget_2->setGeometry(QRect(80, 90, 321, 201));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget_2);
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName("verticalLayout_6");
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_email = new QLabel(layoutWidget);
+        label_email_3 = new QLabel(layoutWidget_2);
+        label_email_3->setObjectName("label_email_3");
+        label_email_3->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_2->addWidget(label_email_3);
+
+        lineEdit_nome = new QLineEdit(layoutWidget_2);
+        lineEdit_nome->setObjectName("lineEdit_nome");
+        lineEdit_nome->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
+
+        horizontalLayout_2->addWidget(lineEdit_nome);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_2);
+
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        label_email = new QLabel(layoutWidget_2);
         label_email->setObjectName("label_email");
+        label_email->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_2->addWidget(label_email);
+        horizontalLayout_7->addWidget(label_email);
 
-        lineEdit_email = new QLineEdit(layoutWidget);
+        lineEdit_email = new QLineEdit(layoutWidget_2);
         lineEdit_email->setObjectName("lineEdit_email");
+        lineEdit_email->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
 
-        horizontalLayout_2->addWidget(lineEdit_email);
+        horizontalLayout_7->addWidget(lineEdit_email);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout_6->addLayout(horizontalLayout_7);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        label_senha = new QLabel(layoutWidget);
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
+        label_senha = new QLabel(layoutWidget_2);
         label_senha->setObjectName("label_senha");
+        label_senha->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_3->addWidget(label_senha);
+        horizontalLayout_8->addWidget(label_senha);
 
-        lineEdit_senha = new QLineEdit(layoutWidget);
+        lineEdit_senha = new QLineEdit(layoutWidget_2);
         lineEdit_senha->setObjectName("lineEdit_senha");
+        lineEdit_senha->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
         lineEdit_senha->setEchoMode(QLineEdit::EchoMode::Password);
 
-        horizontalLayout_3->addWidget(lineEdit_senha);
+        horizontalLayout_8->addWidget(lineEdit_senha);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout_6->addLayout(horizontalLayout_8);
 
 
-        verticalLayout_2->addLayout(verticalLayout);
+        verticalLayout_5->addLayout(verticalLayout_6);
 
-
-        verticalLayout_3->addLayout(verticalLayout_2);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        pushButton_registro = new QPushButton(layoutWidget);
+        pushButton_registro = new QPushButton(layoutWidget_2);
         pushButton_registro->setObjectName("pushButton_registro");
+        pushButton_registro->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_4->addWidget(pushButton_registro);
+        verticalLayout_5->addWidget(pushButton_registro);
 
-
-        verticalLayout_3->addLayout(horizontalLayout_4);
-
+        label_login = new QLabel(centralwidget);
+        label_login->setObjectName("label_login");
+        label_login->setGeometry(QRect(90, 20, 341, 71));
+        label_login->setStyleSheet(QString::fromUtf8(""));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(100, 10, 91, 111));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/resource/resource/logo.png")));
+        label->setScaledContents(true);
         registerwindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(registerwindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
-        registerwindow->setMenuBar(menubar);
         statusbar = new QStatusBar(registerwindow);
         statusbar->setObjectName("statusbar");
         registerwindow->setStatusBar(statusbar);
@@ -152,11 +152,13 @@ public:
     {
         registerwindow->setWindowTitle(QCoreApplication::translate("registerwindow", "MainWindow", nullptr));
         pushButton_irparalogin->setText(QCoreApplication::translate("registerwindow", "Ir para Login", nullptr));
-        label->setText(QCoreApplication::translate("registerwindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt;\">Tela de Registro </span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:26pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
-        label_nome->setText(QCoreApplication::translate("registerwindow", "Nome: ", nullptr));
+        label_email_3->setText(QCoreApplication::translate("registerwindow", "Nome: ", nullptr));
         label_email->setText(QCoreApplication::translate("registerwindow", "E-mail: ", nullptr));
         label_senha->setText(QCoreApplication::translate("registerwindow", "Senha: ", nullptr));
+        lineEdit_senha->setText(QString());
         pushButton_registro->setText(QCoreApplication::translate("registerwindow", "Registrar", nullptr));
+        label_login->setText(QCoreApplication::translate("registerwindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:700;\">Registro</span></p></body></html>", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };

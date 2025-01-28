@@ -9,6 +9,7 @@ release/registerwindow.o
 release/updatewindow.o
 release/usuario.o
 release/usuariodao.o
+release/qrc_resources.o
 release/moc_configuracoes.o
 release/moc_deletewindow.o
 release/moc_loginwindow.o

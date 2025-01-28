@@ -9,6 +9,7 @@ debug/registerwindow.o
 debug/updatewindow.o
 debug/usuario.o
 debug/usuariodao.o
+debug/qrc_resources.o
 debug/moc_configuracoes.o
 debug/moc_deletewindow.o
 debug/moc_loginwindow.o

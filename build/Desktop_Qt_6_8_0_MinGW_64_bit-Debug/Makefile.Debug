@@ -60,7 +60,8 @@ SOURCES       = ..\..\clima.cpp \
 		..\..\registerwindow.cpp \
 		..\..\updatewindow.cpp \
 		..\..\usuario.cpp \
-		..\..\usuariodao.cpp debug\moc_configuracoes.cpp \
+		..\..\usuariodao.cpp debug\qrc_resources.cpp \
+		debug\moc_configuracoes.cpp \
 		debug\moc_deletewindow.cpp \
 		debug\moc_loginwindow.cpp \
 		debug\moc_mainwindow.cpp \
@@ -77,6 +78,7 @@ OBJECTS       = debug/clima.o \
 		debug/updatewindow.o \
 		debug/usuario.o \
 		debug/usuariodao.o \
+		debug/qrc_resources.o \
 		debug/moc_configuracoes.o \
 		debug/moc_deletewindow.o \
 		debug/moc_loginwindow.o \
@@ -123,10 +125,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) poo2_climatech.zip $(SOURCES) $(DIST) ..\..\..\..\poo2_climatech.pro F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\spec_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\device_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\sanitize.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\gcc-base.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\g++-base.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\windows-vulkan.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\g++-win32.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\windows-desktop.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\qconfig.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_freetype.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_libpng.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_openxr_loader.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3danimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3danimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dcore.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dcore_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dextras.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dextras_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dinput.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dinput_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dlogic.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dlogic_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickanimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickextras.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickextras_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickinput.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickinput_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickrender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickrender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3drender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3drender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_activeqt.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_activeqt_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axbase_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axcontainer.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axcontainer_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axserver.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bluetooth.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bluetooth_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bodymovin_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_charts.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_charts_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_concurrent.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core5compat.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core5compat_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualization.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualization_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_dbus.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designer.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designer_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_examples_asset_downloader_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphs.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphs_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphswidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphswidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpc.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpcquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpcquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_gui.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_gui_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_help.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_help_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_httpserver.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_httpserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_jsonrpc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsplatform.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsplatform_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssettings.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_languageserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_linguist.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_location.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_location_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimedia.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_network.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_network_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_networkauth.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_networkauth_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_nfc.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_nfc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_opengl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openxr_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdf.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdf_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_png_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioning.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioning_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioningquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioningquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_printsupport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobuf.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobuf_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtcoretypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtcoretypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtguitypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtguitypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufwellknowntypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufwellknowntypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlassetdownloader.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlassetdownloader_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmeta.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmeta_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltest.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3d.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysics.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dxr.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dxr_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fluentwinui3styleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fluentwinui3styleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimagegenerator_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_repparser.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_repparser_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxmlqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxmlqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensors.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensors_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensorsquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensorsquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialbus.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialbus_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_shadertools.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sql.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sql_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachine.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachine_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachineqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachineqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svg.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svg_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_testlib.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_texttospeech.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_texttospeech_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_tools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uitools.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboardsettings.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboardsettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannelquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannelquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_websockets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_websockets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webview.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webview_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webviewquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webviewquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_widgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_xml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_xml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt_functions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\win32-g++\qmake.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\spec_post.prf .qmake.stash F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exclusive_builds.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\toolchain.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\default_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\default_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resolve_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exclusive_builds_post.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\default_post.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\build_pass.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qml_debug.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\precompile_header.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\warn_on.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\permissions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resources_functions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resources.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\moc.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\opengl.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\uic.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qmake_use.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\file_copies.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\windows.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\testcase_targets.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exceptions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\yacc.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\lex.prf ..\..\poo2_climatech.pro F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Widgets.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Gui.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Sql.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Network.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Core.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6EntryPoint.prl    F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\data\dummy.cpp ..\..\clima.h ..\..\climadao.h ..\..\configuracoes.h ..\..\deletewindow.h ..\..\loginwindow.h ..\..\mainwindow.h ..\..\registerwindow.h ..\..\updatewindow.h ..\..\usuario.h ..\..\usuariodao.h  ..\..\clima.cpp ..\..\climadao.cpp ..\..\configuracoes.cpp ..\..\deletewindow.cpp ..\..\loginwindow.cpp ..\..\main.cpp ..\..\mainwindow.cpp ..\..\registerwindow.cpp ..\..\updatewindow.cpp ..\..\usuario.cpp ..\..\usuariodao.cpp ..\..\configuracoes.ui ..\..\deletewindow.ui ..\..\loginwindow.ui ..\..\mainwindow.ui ..\..\registerwindow.ui ..\..\updatewindow.ui    
+	$(ZIP) poo2_climatech.zip $(SOURCES) $(DIST) ..\..\..\..\poo2_climatech.pro F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\spec_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\device_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\sanitize.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\gcc-base.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\g++-base.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\windows-vulkan.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\g++-win32.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\common\windows-desktop.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\qconfig.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_freetype.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_libpng.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_ext_openxr_loader.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3danimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3danimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dcore.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dcore_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dextras.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dextras_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dinput.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dinput_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dlogic.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dlogic_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickanimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickextras.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickextras_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickinput.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickinput_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickrender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickrender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3drender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_3drender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_activeqt.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_activeqt_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axbase_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axcontainer.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axcontainer_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axserver.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_axserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bluetooth.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bluetooth_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_bodymovin_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_charts.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_charts_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_concurrent.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core5compat.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core5compat_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_core_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualization.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualization_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_dbus.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designer.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designer_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_examples_asset_downloader_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphs.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphs_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphswidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_graphswidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpc.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpcquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_grpcquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_gui.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_gui_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_help.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_help_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_httpserver.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_httpserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_jsonrpc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsplatform.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsplatform_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssettings.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_languageserver_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_linguist.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_location.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_location_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimedia.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_network.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_network_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_networkauth.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_networkauth_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_nfc.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_nfc_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_opengl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_openxr_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdf.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdf_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_pdfwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_png_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioning.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioning_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioningquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_positioningquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_printsupport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobuf.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobuf_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtcoretypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtcoretypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtguitypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufqtguitypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufwellknowntypes.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_protobufwellknowntypes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlassetdownloader.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlassetdownloader_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmeta.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmeta_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltest.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3d.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysics.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dxr.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick3dxr_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fluentwinui3styleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fluentwinui3styleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimage.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimage_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickvectorimagegenerator_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjects.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjects_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_repparser.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_repparser_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxmlqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_scxmlqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensors.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensors_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensorsquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sensorsquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialbus.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialbus_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialport.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_serialport_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_shadertools.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sql.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_sql_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachine.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachine_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachineqml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_statemachineqml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svg.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svg_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_testlib.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_texttospeech.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_texttospeech_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_tools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uitools.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboardsettings.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_virtualkeyboardsettings_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannel.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannel_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannelquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webchannelquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_websockets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_websockets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webview.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webview_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webviewquick.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_webviewquick_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_widgets.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_xml.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_xml_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt_functions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\win32-g++\qmake.conf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\spec_post.prf .qmake.stash F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exclusive_builds.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\toolchain.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\default_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\default_pre.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resolve_config.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exclusive_builds_post.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\default_post.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\build_pass.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qml_debug.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\precompile_header.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\warn_on.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\permissions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qt.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resources_functions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\resources.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\moc.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\opengl.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\uic.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\qmake_use.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\file_copies.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\win32\windows.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\testcase_targets.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\exceptions.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\yacc.prf F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\lex.prf ..\..\poo2_climatech.pro ..\..\resources.qrc F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Widgets.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Gui.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Sql.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Network.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6Core.prl F:\Programas\QtCreator\6.8.0\mingw_64\lib\Qt6EntryPoint.prl   ..\..\resources.qrc F:\Programas\QtCreator\6.8.0\mingw_64\mkspecs\features\data\dummy.cpp ..\..\clima.h ..\..\climadao.h ..\..\configuracoes.h ..\..\deletewindow.h ..\..\loginwindow.h ..\..\mainwindow.h ..\..\registerwindow.h ..\..\updatewindow.h ..\..\usuario.h ..\..\usuariodao.h  ..\..\clima.cpp ..\..\climadao.cpp ..\..\configuracoes.cpp ..\..\deletewindow.cpp ..\..\loginwindow.cpp ..\..\main.cpp ..\..\mainwindow.cpp ..\..\registerwindow.cpp ..\..\updatewindow.cpp ..\..\usuario.cpp ..\..\usuariodao.cpp ..\..\configuracoes.ui ..\..\deletewindow.ui ..\..\loginwindow.ui ..\..\mainwindow.ui ..\..\registerwindow.ui ..\..\updatewindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\clima.o debug\climadao.o debug\configuracoes.o debug\deletewindow.o debug\loginwindow.o debug\main.o debug\mainwindow.o debug\registerwindow.o debug\updatewindow.o debug\usuario.o debug\usuariodao.o debug\moc_configuracoes.o debug\moc_deletewindow.o debug\moc_loginwindow.o debug\moc_mainwindow.o debug\moc_registerwindow.o debug\moc_updatewindow.o
+	-$(DEL_FILE) debug\clima.o debug\climadao.o debug\configuracoes.o debug\deletewindow.o debug\loginwindow.o debug\main.o debug\mainwindow.o debug\registerwindow.o debug\updatewindow.o debug\usuario.o debug\usuariodao.o debug\qrc_resources.o debug\moc_configuracoes.o debug\moc_deletewindow.o debug\moc_loginwindow.o debug\moc_mainwindow.o debug\moc_registerwindow.o debug\moc_updatewindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -143,8 +145,14 @@ benchmark: first
 
 compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
-compiler_rcc_make_all:
+compiler_rcc_make_all: debug/qrc_resources.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) debug\qrc_resources.cpp
+debug/qrc_resources.cpp: ../../resources.qrc \
+		F:/Programas/QtCreator/6.8.0/mingw_64/bin/rcc.exe \
+		../../resource/logo.png
+	F:\Programas\QtCreator\6.8.0\mingw_64\bin\rcc.exe -name resources --no-zstd ..\..\resources.qrc -o debug\qrc_resources.cpp
+
 compiler_moc_predefs_make_all: debug/moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) debug\moc_predefs.h
@@ -542,6 +550,19 @@ debug/moc_deletewindow.cpp: ../../deletewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		../../usuario.h \
 		debug/moc_predefs.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/bin/moc.exe
 	F:\Programas\QtCreator\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IF:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech" -IF:/Programas/QtCreator/6.8.0/mingw_64/include -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore -I. -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IF:/Programas/QtCreator/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\deletewindow.h -o debug\moc_deletewindow.cpp
@@ -738,6 +759,56 @@ debug/moc_loginwindow.cpp: ../../loginwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../mainwindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhttpheaders.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QSharedDataPointer \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QUrl \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/q26numeric.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslConfiguration \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcryptographichash.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qdatetime.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcalendar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qssl.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QFlags \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QMetaType \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkReply \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkreply.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QIODevice \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkRequest \
+		../../loginwindow.h \
+		../../registerwindow.h \
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		../../usuario.h \
+		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
 		debug/moc_predefs.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/bin/moc.exe
 	F:\Programas\QtCreator\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IF:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech" -IF:/Programas/QtCreator/6.8.0/mingw_64/include -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore -I. -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IF:/Programas/QtCreator/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\loginwindow.h -o debug\moc_loginwindow.cpp
@@ -967,6 +1038,7 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QIODevice \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkRequest \
 		../../loginwindow.h \
+		../../mainwindow.h \
 		../../registerwindow.h \
 		../../usuariodao.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
@@ -981,6 +1053,8 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
 		../../usuario.h \
 		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
 		debug/moc_predefs.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/bin/moc.exe
 	F:\Programas\QtCreator\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IF:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech" -IF:/Programas/QtCreator/6.8.0/mingw_64/include -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore -I. -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IF:/Programas/QtCreator/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -1191,6 +1265,42 @@ debug/moc_registerwindow.cpp: ../../registerwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
 		../../usuario.h \
 		../../loginwindow.h \
+		../../mainwindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhttpheaders.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QSharedDataPointer \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QUrl \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/q26numeric.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslConfiguration \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcryptographichash.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qdatetime.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcalendar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qssl.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QFlags \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QMetaType \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkReply \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkreply.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QIODevice \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkRequest \
+		../../registerwindow.h \
+		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
 		debug/moc_predefs.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/bin/moc.exe
 	F:\Programas\QtCreator\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IF:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech" -IF:/Programas/QtCreator/6.8.0/mingw_64/include -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore -I. -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IF:/Programas/QtCreator/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\registerwindow.h -o debug\moc_registerwindow.cpp
@@ -1387,6 +1497,19 @@ debug/moc_updatewindow.cpp: ../../updatewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		../../usuario.h \
 		debug/moc_predefs.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/bin/moc.exe
 	F:\Programas\QtCreator\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IF:/Programas/QtCreator/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/gian2/OneDrive/Área de Trabalho/GitClones/poo2_climatech" -IF:/Programas/QtCreator/6.8.0/mingw_64/include -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork -IF:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore -I. -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IF:/Programas/QtCreator/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IF:/Programas/QtCreator/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\updatewindow.h -o debug\moc_updatewindow.cpp
@@ -1428,7 +1551,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 
 
@@ -2112,7 +2235,54 @@ debug/deletewindow.o: ../../deletewindow.cpp ../../deletewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_deletewindow.h
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		../../usuario.h \
+		ui_deletewindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QWidget \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\deletewindow.o ..\..\deletewindow.cpp
 
 debug/loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
@@ -2307,8 +2477,56 @@ debug/loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_loginwindow.h \
+		../../mainwindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhttpheaders.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QSharedDataPointer \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QUrl \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/q26numeric.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslConfiguration \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcryptographichash.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qdatetime.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcalendar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qssl.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QFlags \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QMetaType \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkReply \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkreply.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QIODevice \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkRequest \
+		../../registerwindow.h \
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		../../usuario.h \
+		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
+		ui_loginwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
@@ -2340,20 +2558,7 @@ debug/loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmessagebox.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
-		../../usuariodao.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
-		../../usuario.h
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\loginwindow.o ..\..\loginwindow.cpp
 
 debug/main.o: ../../main.cpp ../../mainwindow.h \
@@ -2595,6 +2800,8 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
 		../../usuario.h \
 		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp
@@ -2838,6 +3045,8 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
 		../../usuario.h \
 		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
 		ui_mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
@@ -2888,9 +3097,7 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QJsonArray \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qjsonarray.h \
 		../../clima.h \
-		../../climadao.h \
-		../../updatewindow.h \
-		../../deletewindow.h
+		../../climadao.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 
 debug/registerwindow.o: ../../registerwindow.cpp ../../registerwindow.h \
@@ -3099,8 +3306,42 @@ debug/registerwindow.o: ../../registerwindow.cpp ../../registerwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
 		../../usuario.h \
 		../../loginwindow.h \
-		ui_registerwindow.h \
+		../../mainwindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkAccessManager \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkrequest.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhttpheaders.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QSharedDataPointer \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QUrl \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/q26numeric.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslConfiguration \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslconfiguration.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslcertificate.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcryptographichash.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qdatetime.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qcalendar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qssl.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QFlags \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QMetaType \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkReply \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/qnetworkreply.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QIODevice \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtNetwork/QNetworkRequest \
+		../../configuracoes.h \
+		../../updatewindow.h \
+		../../deletewindow.h \
+		ui_registerwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
@@ -3327,7 +3568,54 @@ debug/updatewindow.o: ../../updatewindow.cpp ../../updatewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
-		ui_updatewindow.h
+		../../usuariodao.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlDatabase \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqldatabase.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsql-config.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qtsqlexports.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qmetaobject.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlQuery \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlquery.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/QSqlError \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtSql/qsqlerror.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QString \
+		../../usuario.h \
+		ui_updatewindow.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QVariant \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QWidget \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\updatewindow.o ..\..\updatewindow.cpp
 
 debug/usuario.o: ../../usuario.cpp ../../usuario.h \
@@ -3537,6 +3825,9 @@ debug/usuariodao.o: ../../usuariodao.cpp ../../usuariodao.h \
 		../../usuario.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\usuariodao.o ..\..\usuariodao.cpp
+
+debug/qrc_resources.o: debug/qrc_resources.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\qrc_resources.o debug\qrc_resources.cpp
 
 debug/moc_configuracoes.o: debug/moc_configuracoes.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_configuracoes.o debug\moc_configuracoes.cpp

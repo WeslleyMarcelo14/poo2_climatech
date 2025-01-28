@@ -15,10 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,105 +25,92 @@ class Ui_DeleteWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *cancelarButton;
-    QLabel *label_4;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QLabel *label_icon;
     QLabel *label;
-    QLineEdit *lineEdit_nome;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_2;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_4;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *label_email_2;
     QLineEdit *lineEdit_email;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_3;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_senha_2;
     QLineEdit *lineEdit_senha;
-    QSpacerItem *verticalSpacer;
     QPushButton *deletarButton;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *DeleteWindow)
     {
         if (DeleteWindow->objectName().isEmpty())
             DeleteWindow->setObjectName("DeleteWindow");
-        DeleteWindow->resize(800, 600);
+        DeleteWindow->resize(496, 396);
         centralwidget = new QWidget(DeleteWindow);
         centralwidget->setObjectName("centralwidget");
-        cancelarButton = new QPushButton(centralwidget);
-        cancelarButton->setObjectName("cancelarButton");
-        cancelarButton->setGeometry(QRect(320, 430, 101, 31));
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(230, 90, 331, 51));
+        label_icon = new QLabel(centralwidget);
+        label_icon->setObjectName("label_icon");
+        label_icon->setGeometry(QRect(90, 60, 341, 71));
+        label_icon->setStyleSheet(QString::fromUtf8(""));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(100, 30, 91, 111));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/resource/resource/logo.png")));
+        label->setScaledContents(true);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(120, 180, 501, 191));
-        verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        label = new QLabel(layoutWidget);
-        label->setObjectName("label");
+        layoutWidget->setGeometry(QRect(90, 120, 321, 201));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        label_email_2 = new QLabel(layoutWidget);
+        label_email_2->setObjectName("label_email_2");
+        label_email_2->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout->addWidget(label);
-
-        lineEdit_nome = new QLineEdit(layoutWidget);
-        lineEdit_nome->setObjectName("lineEdit_nome");
-
-        horizontalLayout->addWidget(lineEdit_nome);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName("label_2");
-
-        horizontalLayout_2->addWidget(label_2);
+        horizontalLayout_5->addWidget(label_email_2);
 
         lineEdit_email = new QLineEdit(layoutWidget);
         lineEdit_email->setObjectName("lineEdit_email");
+        lineEdit_email->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
 
-        horizontalLayout_2->addWidget(lineEdit_email);
+        horizontalLayout_5->addWidget(lineEdit_email);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout_4->addLayout(horizontalLayout_5);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName("label_3");
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName("horizontalLayout_6");
+        label_senha_2 = new QLabel(layoutWidget);
+        label_senha_2->setObjectName("label_senha_2");
+        label_senha_2->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_3->addWidget(label_3);
+        horizontalLayout_6->addWidget(label_senha_2);
 
         lineEdit_senha = new QLineEdit(layoutWidget);
         lineEdit_senha->setObjectName("lineEdit_senha");
+        lineEdit_senha->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
+        lineEdit_senha->setEchoMode(QLineEdit::EchoMode::Password);
 
-        horizontalLayout_3->addWidget(lineEdit_senha);
+        horizontalLayout_6->addWidget(lineEdit_senha);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout_4->addLayout(horizontalLayout_6);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        verticalLayout->addItem(verticalSpacer);
+        verticalLayout_3->addLayout(verticalLayout_4);
 
         deletarButton = new QPushButton(layoutWidget);
         deletarButton->setObjectName("deletarButton");
+        deletarButton->setStyleSheet(QString::fromUtf8(""));
 
-        verticalLayout->addWidget(deletarButton);
+        verticalLayout_3->addWidget(deletarButton);
 
         DeleteWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(DeleteWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
-        DeleteWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(DeleteWindow);
-        statusbar->setObjectName("statusbar");
-        DeleteWindow->setStatusBar(statusbar);
 
         retranslateUi(DeleteWindow);
 
@@ -136,12 +120,11 @@ public:
     void retranslateUi(QMainWindow *DeleteWindow)
     {
         DeleteWindow->setWindowTitle(QCoreApplication::translate("DeleteWindow", "MainWindow", nullptr));
-        cancelarButton->setText(QCoreApplication::translate("DeleteWindow", "Cancelar", nullptr));
-        label_4->setText(QCoreApplication::translate("DeleteWindow", "<h1>Tela de Deletar Usuario<h1>", nullptr));
-        label->setText(QCoreApplication::translate("DeleteWindow", "Nome: ", nullptr));
-        label_2->setText(QCoreApplication::translate("DeleteWindow", "Email: ", nullptr));
-        label_3->setText(QCoreApplication::translate("DeleteWindow", "Senha:", nullptr));
-        deletarButton->setText(QCoreApplication::translate("DeleteWindow", "Deletar", nullptr));
+        label_icon->setText(QCoreApplication::translate("DeleteWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:700;\">Deletar</span></p><p align=\"center\"><span style=\" font-size:26pt; font-weight:700;\"><br/></span></p><h2 align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:26pt; font-weight:700;\"><br/></h2></body></html>", nullptr));
+        label->setText(QString());
+        label_email_2->setText(QCoreApplication::translate("DeleteWindow", "E-mail: ", nullptr));
+        label_senha_2->setText(QCoreApplication::translate("DeleteWindow", "Senha: ", nullptr));
+        deletarButton->setText(QCoreApplication::translate("DeleteWindow", "Deletar Usu\303\241rio", nullptr));
     } // retranslateUi
 
 };

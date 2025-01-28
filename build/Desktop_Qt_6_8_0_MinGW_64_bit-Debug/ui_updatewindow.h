@@ -15,9 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -28,126 +26,116 @@ class Ui_UpdateWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *CancelarButton;
-    QLabel *label_5;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout_2;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label;
-    QLineEdit *lineEdit_nome;
+    QLabel *label_login;
+    QWidget *layoutWidget_2;
+    QVBoxLayout *verticalLayout_5;
+    QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_2;
-    QLineEdit *lineEdit_email;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_3;
-    QLineEdit *lineEdit_novasenha;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_4;
-    QLineEdit *lineEdit_cnovasenha;
-    QSpacerItem *verticalSpacer;
+    QLabel *label_email_3;
+    QLineEdit *lineEdit_nome;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_email;
+    QLineEdit *lineEdit_novaSenha;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_senha;
+    QLineEdit *lineEdit_cnovaSenha;
     QPushButton *AlterarButton;
-    QMenuBar *menubar;
+    QLabel *label;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *UpdateWindow)
     {
         if (UpdateWindow->objectName().isEmpty())
             UpdateWindow->setObjectName("UpdateWindow");
-        UpdateWindow->resize(800, 600);
+        UpdateWindow->resize(496, 396);
         centralwidget = new QWidget(UpdateWindow);
         centralwidget->setObjectName("centralwidget");
-        CancelarButton = new QPushButton(centralwidget);
-        CancelarButton->setObjectName("CancelarButton");
-        CancelarButton->setGeometry(QRect(340, 480, 91, 31));
-        label_5 = new QLabel(centralwidget);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(240, 60, 311, 81));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(110, 190, 551, 231));
-        verticalLayout_2 = new QVBoxLayout(widget);
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        label = new QLabel(widget);
-        label->setObjectName("label");
-
-        horizontalLayout->addWidget(label);
-
-        lineEdit_nome = new QLineEdit(widget);
-        lineEdit_nome->setObjectName("lineEdit_nome");
-
-        horizontalLayout->addWidget(lineEdit_nome);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
+        label_login = new QLabel(centralwidget);
+        label_login->setObjectName("label_login");
+        label_login->setGeometry(QRect(90, 40, 341, 71));
+        label_login->setStyleSheet(QString::fromUtf8(""));
+        layoutWidget_2 = new QWidget(centralwidget);
+        layoutWidget_2->setObjectName("layoutWidget_2");
+        layoutWidget_2->setGeometry(QRect(60, 110, 371, 201));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget_2);
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName("verticalLayout_6");
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_2 = new QLabel(widget);
-        label_2->setObjectName("label_2");
+        label_email_3 = new QLabel(layoutWidget_2);
+        label_email_3->setObjectName("label_email_3");
+        label_email_3->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_2->addWidget(label_2);
+        horizontalLayout_2->addWidget(label_email_3);
 
-        lineEdit_email = new QLineEdit(widget);
-        lineEdit_email->setObjectName("lineEdit_email");
+        lineEdit_nome = new QLineEdit(layoutWidget_2);
+        lineEdit_nome->setObjectName("lineEdit_nome");
+        lineEdit_nome->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
 
-        horizontalLayout_2->addWidget(lineEdit_email);
-
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        label_3 = new QLabel(widget);
-        label_3->setObjectName("label_3");
-
-        horizontalLayout_3->addWidget(label_3);
-
-        lineEdit_novasenha = new QLineEdit(widget);
-        lineEdit_novasenha->setObjectName("lineEdit_novasenha");
-
-        horizontalLayout_3->addWidget(lineEdit_novasenha);
+        horizontalLayout_2->addWidget(lineEdit_nome);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout_6->addLayout(horizontalLayout_2);
 
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        label_4 = new QLabel(widget);
-        label_4->setObjectName("label_4");
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        label_email = new QLabel(layoutWidget_2);
+        label_email->setObjectName("label_email");
+        label_email->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout_4->addWidget(label_4);
+        horizontalLayout_7->addWidget(label_email);
 
-        lineEdit_cnovasenha = new QLineEdit(widget);
-        lineEdit_cnovasenha->setObjectName("lineEdit_cnovasenha");
+        lineEdit_novaSenha = new QLineEdit(layoutWidget_2);
+        lineEdit_novaSenha->setObjectName("lineEdit_novaSenha");
+        lineEdit_novaSenha->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
+        lineEdit_novaSenha->setEchoMode(QLineEdit::EchoMode::Password);
 
-        horizontalLayout_4->addWidget(lineEdit_cnovasenha);
+        horizontalLayout_7->addWidget(lineEdit_novaSenha);
 
 
-        verticalLayout->addLayout(horizontalLayout_4);
+        verticalLayout_6->addLayout(horizontalLayout_7);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
+        label_senha = new QLabel(layoutWidget_2);
+        label_senha->setObjectName("label_senha");
+        label_senha->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_8->addWidget(label_senha);
+
+        lineEdit_cnovaSenha = new QLineEdit(layoutWidget_2);
+        lineEdit_cnovaSenha->setObjectName("lineEdit_cnovaSenha");
+        lineEdit_cnovaSenha->setStyleSheet(QString::fromUtf8("background-color: rgb(164, 249, 203);\n"
+"border-radius: 2px;\n"
+"color:black;"));
+        lineEdit_cnovaSenha->setEchoMode(QLineEdit::EchoMode::Password);
+
+        horizontalLayout_8->addWidget(lineEdit_cnovaSenha);
 
 
-        verticalLayout_2->addLayout(verticalLayout);
+        verticalLayout_6->addLayout(horizontalLayout_8);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer);
+        verticalLayout_5->addLayout(verticalLayout_6);
 
-        AlterarButton = new QPushButton(widget);
+        AlterarButton = new QPushButton(layoutWidget_2);
         AlterarButton->setObjectName("AlterarButton");
+        AlterarButton->setStyleSheet(QString::fromUtf8(""));
 
-        verticalLayout_2->addWidget(AlterarButton);
+        verticalLayout_5->addWidget(AlterarButton);
 
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(100, 30, 91, 111));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/resource/resource/logo.png")));
+        label->setScaledContents(true);
         UpdateWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(UpdateWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
-        UpdateWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(UpdateWindow);
         statusbar->setObjectName("statusbar");
         UpdateWindow->setStatusBar(statusbar);
@@ -160,13 +148,13 @@ public:
     void retranslateUi(QMainWindow *UpdateWindow)
     {
         UpdateWindow->setWindowTitle(QCoreApplication::translate("UpdateWindow", "MainWindow", nullptr));
-        CancelarButton->setText(QCoreApplication::translate("UpdateWindow", "Cancelar", nullptr));
-        label_5->setText(QCoreApplication::translate("UpdateWindow", "<h1>Tela de Alterar Senha<\\h1>", nullptr));
-        label->setText(QCoreApplication::translate("UpdateWindow", "                           Nome: ", nullptr));
-        label_2->setText(QCoreApplication::translate("UpdateWindow", "                            Email: ", nullptr));
-        label_3->setText(QCoreApplication::translate("UpdateWindow", "                  Nova Senha: ", nullptr));
-        label_4->setText(QCoreApplication::translate("UpdateWindow", "Confirmar Nova Senha: ", nullptr));
-        AlterarButton->setText(QCoreApplication::translate("UpdateWindow", "Alterar", nullptr));
+        label_login->setText(QCoreApplication::translate("UpdateWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:700;\">Alterar</span></p></body></html>", nullptr));
+        label_email_3->setText(QCoreApplication::translate("UpdateWindow", "E-mail:           ", nullptr));
+        label_email->setText(QCoreApplication::translate("UpdateWindow", "Nova Senha:", nullptr));
+        label_senha->setText(QCoreApplication::translate("UpdateWindow", "Conf. Senha:", nullptr));
+        lineEdit_cnovaSenha->setText(QString());
+        AlterarButton->setText(QCoreApplication::translate("UpdateWindow", "Alterar Senha", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };
