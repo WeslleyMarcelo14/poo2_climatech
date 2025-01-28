@@ -14,7 +14,12 @@ class Configuracoes : public QMainWindow
 public:
     explicit Configuracoes(QWidget *parent = nullptr);
     ~Configuracoes();
-    QString configtemp = "Celsius - °C";
+
+    // Getter para configtemp
+    QString getConfigTemp() const;
+
+    // Setter para configtemp
+    void setConfigTemp(const QString &value);
 
 private slots:
 
@@ -22,7 +27,7 @@ private slots:
 
 private:
     Ui::Configuracoes *ui;
-
+    QString configtemp;
 };
 
 #endif // CONFIGURACOES_H

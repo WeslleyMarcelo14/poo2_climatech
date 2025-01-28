@@ -84,26 +84,25 @@ void MainWindow::onWeatherDataReceived() {
     QJsonObject ventObj = jsonObj["wind"].toObject();
     double velVento = ventObj["speed"].toDouble();
 
-    qDebug() << "Valor de configtemp:" << config->configtemp;
+    qDebug() << "Valor de configtemp:" << config->getConfigTemp(); // Acesse usando o getter
 
-    if(config->configtemp == "Celsius - °C"){
+    if (config->getConfigTemp() == "Celsius - °C") { // Compare usando o getter
         ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °C");
         ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °C");
         ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °C");
         ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °C");
-
     }
-    else if(config->configtemp == "Fahrenheit - °F"){
-        temperatura = 1.8*temperatura + 32;
-        sensTermica = 1.8*sensTermica + 32;
-        tempMin = 1.8*tempMin + 32;
-        tempMax = 1.8*tempMax + 32;
+    else if (config->getConfigTemp() == "Fahrenheit - °F") { // Compare usando o getter
+        temperatura = 1.8 * temperatura + 32;
+        sensTermica = 1.8 * sensTermica + 32;
+        tempMin = 1.8 * tempMin + 32;
+        tempMax = 1.8 * tempMax + 32;
         ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °F");
         ui->label_sensacaoTermica->setText(QString::number(sensTermica, 'f', 1) + " °F");
         ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " °F");
         ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " °F");
     }
-    else if(config->configtemp == "Kelvin - K"){
+    else if (config->getConfigTemp() == "Kelvin - K") { // Compare usando o getter
         temperatura = temperatura + 273.15;
         sensTermica = sensTermica + 273.15;
         tempMin = tempMin + 273.15;
@@ -113,7 +112,7 @@ void MainWindow::onWeatherDataReceived() {
         ui->label_tempMin->setText(QString::number(tempMin, 'f', 1) + " K");
         ui->label_tempMax->setText(QString::number(tempMax, 'f', 1) + " K");
     }
-    else{
+    else {
         qDebug() << "Valor de configtemp não corresponde a nenhuma unidade conhecida.";
     }
 
