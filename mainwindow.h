@@ -30,6 +30,9 @@ public:
 
     void setNomeUsuario(const QString &nome);
 
+    double temperatura, sensTermica, tempMin, tempMax, umidade, velVento;
+    QString cidade;
+
 private slots:
     void on_comboBox_currentTextChanged(const QString &arg1);
     void onWeatherDataReceived();

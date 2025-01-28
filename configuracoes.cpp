@@ -18,7 +18,6 @@ Configuracoes::~Configuracoes()
 
 void Configuracoes::on_Box_unidade_currentTextChanged(const QString &arg1)
 {
-
     configtemp = arg1;
     qDebug() << "Configtemp atualizado para:" << configtemp;
 
