@@ -2023,23 +2023,21 @@ release/configuracoes.o: ../../configuracoes.cpp ../../configuracoes.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qframe.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QLabel \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpicture.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QRadioButton \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qradiobutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\configuracoes.o ..\..\configuracoes.cpp
 
@@ -2268,15 +2266,9 @@ release/deletewindow.o: ../../deletewindow.cpp ../../deletewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
@@ -2545,14 +2537,9 @@ release/loginwindow.o: ../../loginwindow.cpp ../../loginwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
@@ -3360,9 +3347,6 @@ release/registerwindow.o: ../../registerwindow.cpp ../../registerwindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -3601,13 +3585,9 @@ release/updatewindow.o: ../../updatewindow.cpp ../../updatewindow.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextformat.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qpen.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtGui/qtextoption.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QPushButton \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
 		F:/Programas/QtCreator/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \

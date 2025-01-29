@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     config = new Configuracoes(this);
 
     this->setWindowTitle("Tela Principal");
+    setWindowIcon(QIcon(":/resource/resource/logo.png")); // Caminho dentro do .qrc
 }
 
 MainWindow::~MainWindow()
@@ -38,7 +39,7 @@ void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
     cidade = arg1;
     qDebug() << cidade;
     QString url = QString("http://api.openweathermap.org/data/2.5/weather?q=%1&appid=%2").arg(cidade).arg(apiKey);
-    qDebug() << url;
+    //qDebug() << url;
 
     manager = new QNetworkAccessManager(this);
     QNetworkRequest request((QUrl(url)));
@@ -60,7 +61,7 @@ void MainWindow::onWeatherDataReceived() {
     }
 
     QByteArray response_data = reply->readAll();
-    qDebug() << "Resposta da API:" << response_data;
+    //qDebug() << "Resposta da API:" << response_data;
 
     QJsonDocument jsonDoc = QJsonDocument::fromJson(response_data);
 
@@ -90,12 +91,12 @@ void MainWindow::onWeatherDataReceived() {
 
     ClimaDAO climaDAO;
     if(climaDAO.inserirClima(clima)){
-        QMessageBox::information(this, "Sucesso", "Clima registrado com sucesso!");
+        //QMessageBox::information(this, "Sucesso", "Clima registrado com sucesso!");
     } else {
         QMessageBox::information(this, "Erro", "Erro ao registrar clima.");
     }
 
-    qDebug() << "Valor de configtemp:" << config->getConfigTemp(); // Acesse usando o getter
+    //qDebug() << "Valor de configtemp:" << config->getConfigTemp(); // Acesse usando o getter
 
     if (config->getConfigTemp() == "Celsius - °C") { // Compare usando o getter
         ui->label_temperaturaAtual->setText(QString::number(temperatura, 'f', 1) + " °C");

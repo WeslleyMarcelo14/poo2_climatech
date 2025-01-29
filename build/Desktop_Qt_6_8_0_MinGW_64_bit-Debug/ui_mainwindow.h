@@ -185,7 +185,7 @@ public:
         frame_2->setFrameShadow(QFrame::Shadow::Raised);
         layoutWidget2 = new QWidget(frame_2);
         layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(10, 30, 411, 76));
+        layoutWidget2->setGeometry(QRect(10, 30, 411, 31));
         horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
