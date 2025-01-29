@@ -72,6 +72,7 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject jsonObj = jsonDoc.object();
 
+    // obtenção do nome da cidade da API
     QString cidade = jsonObj["name"].toString();
 
     QJsonObject mainObj = jsonObj["main"].toObject();
@@ -83,6 +84,16 @@ void MainWindow::onWeatherDataReceived() {
 
     QJsonObject ventObj = jsonObj["wind"].toObject();
     double velVento = ventObj["speed"].toDouble();
+    double dirVento = ventObj["deg"].toDouble();
+
+    Clima clima(temperatura, sensTermica, tempMin, tempMax, umidade, velVento, dirVento, cidade);
+
+    ClimaDAO climaDAO;
+    if(climaDAO.inserirClima(clima)){
+        QMessageBox::information(this, "Sucesso", "Clima registrado com sucesso!");
+    } else {
+        QMessageBox::information(this, "Erro", "Erro ao registrar clima.");
+    }
 
     qDebug() << "Valor de configtemp:" << config->getConfigTemp(); // Acesse usando o getter
 
