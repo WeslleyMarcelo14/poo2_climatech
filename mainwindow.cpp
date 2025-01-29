@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     config = new Configuracoes(this);
 
     this->setWindowTitle("Tela Principal");
-    setWindowIcon(QIcon(":/resource/resource/logo.png")); // Caminho dentro do .qrc
+    setWindowIcon(QIcon(":/resource/resource/logo.png"));
 }
 
 MainWindow::~MainWindow()
